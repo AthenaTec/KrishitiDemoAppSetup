@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/control_padding">
+
+
+        <TextView
+            android:id="@+id/textview_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/control_padding"
+            android:gravity="center"
+            android:text="@string/documents"
+            android:textColor="@color/font_heading"
+            android:textSize="22sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/height_4"
+            android:layout_marginTop="@dimen/height_8"
+            android:background="@color/line" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/documentlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/height_10"
+            android:layout_marginLeft="@dimen/height_20"
+            android:layout_marginRight="@dimen/height_20"
+            android:layout_marginTop="@dimen/height_20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/strokeshape_bg"
+                android:gravity="center"
+                android:paddingEnd="@dimen/height_40"
+                android:paddingStart="@dimen/height_40"
+                android:text="@string/cancel"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

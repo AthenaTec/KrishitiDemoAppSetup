@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+     <!-- Font size -->
+    <dimen name="very_miniut_small">9sp</dimen>
+    <dimen name="miniut_small">10sp</dimen>
+    <dimen name="font_very_small">11sp</dimen>
+    <dimen name="font_very_small_12">12sp</dimen>
+    <dimen name="font_samll">13sp</dimen>
+    <dimen name="font_very_medium">14sp</dimen>
+    <dimen name="font_medium">15sp</dimen>
+
+    <dimen name="font_large" tools:ignore="UnusedResources">17sp</dimen>
+    <dimen name="font_extra_large">18sp</dimen>
+
+    <dimen name="for_check_box">12dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="control_padding">8dp</dimen>
+    <dimen name="half_padding" tools:ignore="UnusedResources">12dp</dimen>
+
+    <dimen name="item_offset">2dp</dimen>
+
+
+    <!-- Random -->
+    <dimen name="height_0">0dp</dimen>
+    <dimen name="height_1">1dp</dimen>
+    <dimen name="height_2">2dp</dimen>
+    <dimen name="height_3">3dp</dimen>
+    <dimen name="height_4">4dp</dimen>
+    <dimen name="height_5">5dp</dimen>
+    <dimen name="height_6">6dp</dimen>
+    <dimen name="height_8">8dp</dimen>
+    <dimen name="height_9">9dp</dimen>
+    <dimen name="height_10">10dp</dimen>
+    <dimen name="height_12">12dp</dimen>
+    <dimen name="height_13" tools:ignore="UnusedResources">13dp</dimen>
+    <dimen name="height_15">15dp</dimen>
+    <dimen name="height_16">16dp</dimen>
+    <dimen name="height_18">18dp</dimen>
+    <dimen name="height_20">20dp</dimen>
+    <dimen name="height_25">25dp</dimen>
+    <dimen name="height_28" tools:ignore="UnusedResources">28dp</dimen>
+    <dimen name="height_30">30dp</dimen>
+    <dimen name="height_35" tools:ignore="UnusedResources">35dp</dimen>
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="height_50" tools:ignore="UnusedResources">50dp</dimen>
+    <dimen name="height_60">60dp</dimen>
+    <!-- Random -->
+    <dimen name="fab_margin">16dp</dimen>
+
+
+</resources>

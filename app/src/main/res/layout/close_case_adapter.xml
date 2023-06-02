@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <!-- <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:stretchColumns="*">
+
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/close_caseid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="C0001"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Activite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/close_personname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Tharani"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Activite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/close_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="9087578965"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Activite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/close_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="ICICI"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Activite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/assigned_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="18-Dec17"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Activite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/closed_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="18-Dec17"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/Activite"
+                android:textSize="13sp" />
+
+        </TableRow>
+    </TableLayout>-->
+
+    <LinearLayout
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/close_caseid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="C0001"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Activite"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/close_personname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tharani"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Activite"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/close_mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="9087578965"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Activite"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/close_bank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ICICI"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Activite"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/assigned_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="18-Dec17"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Activite"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/closed_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Activite"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/slightgrey" />
+
+</LinearLayout>

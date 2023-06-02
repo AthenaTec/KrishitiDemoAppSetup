@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Floor 1"
+        android:textColor="@color/Activite"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/height_8"
+        android:layout_marginTop="@dimen/height_8"
+        android:background="@color/slightgrey"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_8"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_dinning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_dinning"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_dinning"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_wc"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_wc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_wc"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_wc"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_attachbath"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_8"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_attachbath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_attachbath"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_attachbath"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_balcony"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_balcony"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_balcony"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_balcony"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_fb"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_8"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_fb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_fb"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_fb"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_db"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_db"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_db"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_db"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_terrace"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_8"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_terrace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_terrace"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_terrace"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_passage"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_8"
+            android:paddingRight="@dimen/height_8">
+
+            <TextView
+                android:id="@+id/textview_passage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/height_4"
+                android:text="@string/of_passage"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/internal_passage"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:nextFocusForward="@+id/internal_kitchen"
+                android:singleLine="true"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/height_20"
+        android:layout_marginTop="@dimen/height_20"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/noBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/height_30"
+            android:background="@drawable/strokeshape_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/height_40"
+            android:paddingRight="@dimen/height_40"
+            android:text="@string/close_new"
+            android:textAllCaps="true"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+
+        <Button
+            android:id="@+id/yesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/height_20"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:paddingLeft="@dimen/height_40"
+            android:paddingRight="@dimen/height_40"
+            android:text="@string/save"
+            android:textAllCaps="true"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

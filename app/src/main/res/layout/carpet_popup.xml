@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/carpet_per_type"
+                android:textColor="@color/Activite"
+                android:layout_centerVertical="true"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/height_9"
+                app:srcCompat="@drawable/close"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/id_radiogroup_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height_4"
+                android:layout_marginTop="@dimen/height_4"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RadioButton
+                    android:id="@+id/id_radio_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="Select"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_per"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="Permissible Area"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_act"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="Actual Area"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+
+                <RadioButton
+                    android:id="@+id/id_radio_sel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="Selected Area"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/strokeshape_bg"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:text="CANCEL"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshape"
+                android:gravity="center"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:text="UPDATE"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

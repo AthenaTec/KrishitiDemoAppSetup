@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2sdp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray"
+        android:layout_marginBottom="@dimen/_4sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Property ID"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvPropertyId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Case ID 	"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvCaseId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Property Address"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvPropertyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Property Type"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvPropertyType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Latitude &amp; Longitude"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvLatLng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Rate"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Total Property Value"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvPropertyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Distance (km)"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/Activite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

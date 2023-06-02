@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/height_10"
+            android:layout_marginBottom="@dimen/height_5"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/create_cases"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_17sdp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight=".65"
+                android:fontFamily="@font/medium"
+                android:text="@string/applicant_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.35"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/height_5"
+                    android:layout_marginEnd="@dimen/height_5"
+                    android:layout_marginBottom="@dimen/height_5"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/edittext_bg"
+                    tools:ignore="NestedWeights">
+
+                    <Spinner
+                        android:id="@+id/spSalution"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:entries="@array/salution"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        style="@style/StyledImagedown_internal"
+                        android:layout_marginTop="@dimen/height_10"
+                        android:layout_marginBottom="@dimen/height_5"
+                        tools:ignore="ContentDescription" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/height_5"
+                    android:layout_marginBottom="@dimen/height_5"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/edittext_bg">
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/regular"
+                        android:gravity="left|center"
+                        android:inputType="textCapWords"
+                        android:textSize="@dimen/_13sdp"
+                        tools:ignore="LabelFor,SpUsage" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/height_15"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginEnd="@dimen/height_15"
+            android:layout_marginBottom="@dimen/height_5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight=".65"
+                android:fontFamily="@font/medium"
+                android:text="@string/property_type_"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_5"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight="1.35"
+                android:background="@drawable/edittext_bg">
+
+                <Spinner
+                    android:id="@+id/spPropertyType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingTop="@dimen/height_8"
+                    android:spinnerMode="dropdown" />
+
+
+                <ImageView
+                    style="@style/StyledImagedown_large"
+                    android:layout_marginTop="@dimen/height_5"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/height_15"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginEnd="@dimen/height_15"
+            android:layout_marginBottom="@dimen/height_5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight=".65"
+                android:fontFamily="@font/medium"
+                android:text="@string/bank_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_5"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight="1.35"
+                android:background="@drawable/edittext_bg">
+
+                <Spinner
+                    android:id="@+id/spBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingTop="@dimen/height_8"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    style="@style/StyledImagedown_large"
+                    android:layout_marginTop="@dimen/height_5"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/height_15"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginEnd="@dimen/height_15"
+            android:layout_marginBottom="@dimen/height_5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight=".65"
+                android:fontFamily="@font/medium"
+                android:text="@string/case_admin"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_5"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight="1.35"
+                android:background="@drawable/edittext_bg">
+
+                <Spinner
+                    android:id="@+id/spCaseAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingTop="@dimen/height_8"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    style="@style/StyledImagedown_large"
+                    android:layout_marginTop="@dimen/height_5"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/height_15"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginEnd="@dimen/height_15"
+            android:layout_marginBottom="@dimen/height_5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight=".65"
+                android:fontFamily="@font/medium"
+                android:text="@string/report_maker"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_5"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_weight="1.35"
+                android:background="@drawable/edittext_bg">
+
+                <Spinner
+                    android:id="@+id/spReportMaker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingTop="@dimen/height_8"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    style="@style/StyledImagedown_large"
+                    android:layout_marginTop="@dimen/height_5"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/height_20"
+            android:layout_marginTop="@dimen/height_15"
+            android:layout_marginEnd="@dimen/height_20"
+            android:layout_marginBottom="@dimen/height_25"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/strokeshape_bg"
+                android:fontFamily="@font/medium"
+                android:paddingStart="25dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="10dp"
+                android:text="@string/cancel_"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/buttonshape"
+                android:fontFamily="@font/medium"
+                android:paddingStart="25dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="10dp"
+                android:text="@string/create"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

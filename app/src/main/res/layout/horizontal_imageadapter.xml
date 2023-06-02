@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp">
+
+    <LinearLayout
+        android:id="@+id/imagedefaultlayout"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/imagelayoutbg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/plus"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/addimage"
+            android:textSize="@dimen/_8sdp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/txtvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <include layout="@layout/imageclose" />
+    </LinearLayout>
+
+
+</LinearLayout>

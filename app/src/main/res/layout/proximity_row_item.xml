@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/height_6"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/minus_proximity_1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/height_8"
+        android:weightSum="2"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/height_4"
+            android:layout_marginRight="@dimen/height_4"
+            android:layout_weight="0.8"
+            android:background="@drawable/bottom_grey">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/spinner_proximities_1"
+                android:background="@null" />
+
+            <ImageView style="@style/StyledImagedown_large"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+
+        <EditText
+            android:id="@+id/edittext_name_head_1"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/height_4"
+            android:layout_marginRight="@dimen/height_4"
+            android:inputType="textCapWords"
+            android:layout_weight="0.8"
+            android:maxLength="50"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edittext_km_1"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="@dimen/height_6"
+            android:layout_weight="0.4"
+            android:inputType="textCapWords"
+            android:maxLength="10"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/minus_proximity_1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="@dimen/height_18"
+        android:layout_toLeftOf="@+id/add_proximity_1"
+        android:layout_marginTop="3dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/icon_minus"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/add_proximity_1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="@dimen/height_8"
+        android:visibility="visible"
+        app:srcCompat="@drawable/icon_add"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+</RelativeLayout>

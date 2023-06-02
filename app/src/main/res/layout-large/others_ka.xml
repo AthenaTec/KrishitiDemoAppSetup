@@ -1,0 +1,3565 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/my_focuslayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:ignore="InconsistentLayout"></LinearLayout>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/control_padding"
+            android:layout_marginRight="@dimen/control_padding"
+            android:layout_marginBottom="@dimen/control_padding"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="0dp"
+            tools:ignore="ScrollViewSize">
+
+            <!-- Address details tab -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_8"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- arc -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:background="@drawable/bottom_red">
+
+                    <RelativeLayout
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/height_8"
+                        tools:ignore="RtlHardcoded">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/height_10"
+                                android:paddingTop="@dimen/height_4"
+                                android:paddingRight="@dimen/height_0"
+                                android:paddingBottom="@dimen/height_4"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/address"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="UnusedAttribute" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="-0dp"
+                                android:layout_weight="0.5"
+                                tools:ignore="RtlHardcoded">
+
+                                <ImageView
+                                    android:id="@+id/openedimage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:padding="0dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/cutlayout_dummy"
+                                    tools:ignore="ContentDescription" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textview_property_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/property_type_head"
+                            android:textColor="@color/font_text_minor_heading"
+                            tools:ignore="InconsistentLayout" />
+
+                        <TextView
+                            android:id="@+id/textview_property_type_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_6"
+                            android:layout_toRightOf="@+id/textview_property_heading"
+                            android:text="-"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="HardcodedText,InconsistentLayout,RtlHardcoded" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/textview_save_top_dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="@dimen/height_12"
+                        android:layout_marginBottom="@dimen/height_4"
+                        android:layout_toLeftOf="@+id/textview_save_top"
+                        android:background="@drawable/buttonshape"
+                        android:backgroundTint="@color/green"
+                        android:paddingLeft="@dimen/height_25"
+                        android:paddingTop="@dimen/height_4"
+                        android:paddingRight="@dimen/height_25"
+                        android:paddingBottom="@dimen/height_4"
+                        android:text="@string/save_dashboard"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_medium"
+                        tools:ignore="InconsistentLayout,RtlHardcoded,UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/textview_save_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="@dimen/height_4"
+                        android:background="@drawable/buttonshape"
+                        android:backgroundTint="@color/green"
+                        android:paddingLeft="@dimen/height_25"
+                        android:paddingTop="@dimen/height_4"
+                        android:paddingRight="@dimen/height_25"
+                        android:paddingBottom="@dimen/height_4"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_medium"
+                        tools:ignore="RtlHardcoded,UnusedAttribute" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_3"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></View>
+
+
+                    <CheckBox
+                        android:id="@+id/checkbox_same_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/height_5"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:button="@drawable/check_box_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/height_8"
+                        android:text="@string/same"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_very_medium"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></View>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_addr_perdoc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/editText_addr_perdoc"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/addr_perdoc"
+                            android:inputType="textCapWords"
+                            android:maxLength="350" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_addr_site"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/editText_addr_site"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/addr_site"
+                            android:inputType="textCapWords"
+                            android:maxLength="350" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_landmark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_landmark"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/landmark"
+                            android:inputType="textCapWords"
+                            android:maxLength="150" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/control_padding"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_servey_persence"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_servey_persence"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/servey_persence"
+                            android:inputType="textCapWords"
+                            android:maxLength="50" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_plotno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_plotno"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/plotno"
+                            android:inputType="textCapWords"
+                            android:maxLength="50" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/textview_condition_approad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/condition_approad"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_condition_approad"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            android:layout_marginTop="@dimen/height_8"
+                            tools:ignore="ContentDescription" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/control_padding"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/textview_localitycate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/localitycate"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_select_localitycate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:background="@null" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/textview_class_head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/class_head"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_select_class"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/textview_tenureownership"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/tenureownership"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_select_tenure_ownership"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/control_padding"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/textview_landapproval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/landapproval"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_landapproval"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:background="@null" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/textview_property_identified"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/property_identified"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textview_property_identified_text"
+                            style="@style/StyledTilText_multicheck"
+                            android:layout_gravity="left|center_vertical"
+                            android:gravity="left|center_vertical"
+                            tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/textview_persently_occupied"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/persently_occupied"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textview_persently_occupied_text"
+                            style="@style/StyledTilText_multicheck"
+                            android:layout_gravity="left|center_vertical"
+                            android:gravity="left|center_vertical"
+                            tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/control_padding"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/height_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom_grey">
+
+                        <TextView
+                            android:id="@+id/typeoflocality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/typeoflocality"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_typeoflocality"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            tools:ignore="InconsistentLayout" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+                    </FrameLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputLayout_number_of_building"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editText_number_of_building"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/number_of_building"
+                            android:inputType="number"
+                            android:maxLength="10" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview_document_boundary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/height_3"
+                    android:text="@string/document_boundary"
+                    android:textColor="@color/font_heading"
+                    android:textSize="@dimen/font_samll"
+                    android:textStyle="normal"
+                    tools:ignore="RtlHardcoded" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_db_east"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_db_east"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/east"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_db_west"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_db_west"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/west"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_db_north"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_db_north"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/north"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_db_south"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_db_south"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/south"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/height_3"
+                    android:weightSum="2"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/textview_actual_boundary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left"
+                        android:text="@string/actual_boundary"
+                        android:textColor="@color/font_heading"
+                        android:textSize="@dimen/font_samll"
+                        android:textStyle="normal"
+                        tools:ignore="RtlHardcoded" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_same_as_doc_boundary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="1.5"
+                        android:button="@drawable/check_box_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/height_8"
+                        android:text="@string/same_as_docs"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_very_medium"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_ab_east"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_ab_east"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/east"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_ab_west"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint"
+                        tools:ignore="TooManyViews">
+
+                        <EditText
+                            android:id="@+id/editText_ab_west"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/west"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_ab_north"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_ab_north"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/north"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_ab_south"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_ab_south"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/south"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/div_dimension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textview_document_dimension"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:text="@string/document_dimension"
+                        android:textColor="@color/font_heading"
+                        android:textSize="@dimen/font_samll"
+                        android:textStyle="normal"
+                        tools:ignore="RtlHardcoded" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_dd_east"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_dd_east"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/east"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_dd_west"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_dd_west"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/west"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_dd_north"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_dd_north"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/north"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_dd_south"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_dd_south"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/south"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:weightSum="2"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/textview_actual_dimension"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="@string/actual_dimension"
+                            android:textColor="@color/font_heading"
+                            android:textSize="@dimen/font_samll"
+                            android:textStyle="normal"
+                            tools:ignore="RtlHardcoded" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_same_as_doc_dimension"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/height_3"
+                            android:layout_weight="1.5"
+                            android:button="@drawable/check_box_selector"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/height_8"
+                            android:text="@string/same_as_docs"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_very_medium"
+                            tools:ignore="ObsoleteLayoutParam,RtlHardcoded,RtlSymmetry" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ad_east"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ad_east"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/east"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ad_west"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ad_west"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/west"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ad_north"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ad_north"
+                                style="@style/StyledTilEditText"
+                                android:layout_width="match_parent"
+                                android:hint="@string/north"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ad_south"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ad_south"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/south"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/div_setback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textview_document_setback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:gravity="left"
+                        android:text="@string/document_setback"
+                        android:textColor="@color/font_heading"
+                        android:textSize="@dimen/font_samll"
+                        android:textStyle="normal"
+                        tools:ignore="RtlHardcoded" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ds_front"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ds_front"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/front"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ds_left"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ds_left"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/left"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ds_right"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ds_right"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/right"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_ds_rear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_ds_rear"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/rear"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:weightSum="2"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/textview_actual_setback"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="@string/actual_setback"
+                            android:textColor="@color/font_heading"
+                            android:textSize="@dimen/font_samll"
+                            android:textStyle="normal"
+                            tools:ignore="RtlHardcoded" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_same_as_doc_setback"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/height_3"
+                            android:layout_weight="1.5"
+                            android:button="@drawable/check_box_selector"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/height_8"
+                            android:text="@string/same_as_docs"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_very_medium"
+                            tools:ignore="ObsoleteLayoutParam,RtlHardcoded,RtlSymmetry" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_as_front"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_as_front"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/front"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_as_left"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_as_left"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/left"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_as_right"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_as_right"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/right"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_as_rear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <EditText
+                                android:id="@+id/editText_as_rear"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/rear"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview_proximity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/height_3"
+                    android:gravity="left"
+                    android:text="@string/proximity"
+                    android:textColor="@color/font_heading"
+                    android:textSize="@dimen/font_samll"
+                    android:textStyle="normal"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_0"
+                    android:background="@color/white">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toLeftOf="@+id/minus_proximity_head"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/height_8"
+                        android:weightSum="2"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+                        <TextView
+                            android:id="@+id/textview_proximities"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:layout_weight="0.8"
+                            android:gravity="left"
+                            android:text="@string/proximities"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+
+                        <TextView
+                            android:id="@+id/textview_name_head"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_15"
+                            android:layout_marginRight="@dimen/height_4"
+                            android:layout_weight="0.8"
+                            android:gravity="left"
+                            android:text="@string/name_head"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+
+                        <TextView
+                            android:id="@+id/textview_km"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/height_6"
+                            android:layout_weight="0.4"
+                            android:gravity="left"
+                            android:text="@string/km"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/minus_proximity_head"
+                        android:layout_width="25dp"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="@dimen/height_18"
+                        android:layout_toLeftOf="@+id/add_proximity_head"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_minus"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <ImageView
+                        android:id="@+id/add_proximity_head"
+                        android:layout_width="25dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/height_8"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/icon_add"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_proxmity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"></androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/height_5"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/height_5"
+                    android:paddingBottom="@dimen/height_5"
+                    android:weightSum="3">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_plot_demarcated"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/check_box_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:lines="2"
+                        android:paddingLeft="@dimen/height_8"
+                        android:paddingRight="@dimen/height_4"
+                        android:singleLine="false"
+                        android:text="@string/plot_demarcated"
+                        android:textColor="@color/font_text"
+                        android:textSize="@dimen/for_check_box"
+                        tools:ignore="RtlHardcoded" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_isproperty_demolish"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/check_box_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:lines="2"
+                        android:paddingLeft="@dimen/height_8"
+                        android:paddingRight="@dimen/height_4"
+                        android:singleLine="false"
+                        android:text="@string/isproperty_demolish"
+                        android:textColor="@color/font_text"
+                        android:textSize="@dimen/for_check_box"
+                        tools:ignore="RtlHardcoded" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_property_within_muni"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:layout_weight="1"
+                        android:button="@drawable/check_box_selector"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:lines="2"
+                        android:paddingLeft="@dimen/height_4"
+                        android:paddingRight="@dimen/height_2"
+                        android:paddingBottom="@dimen/height_5"
+                        android:singleLine="false"
+                        android:text="@string/property_within_muni"
+                        android:textColor="@color/font_text"
+                        android:textSize="@dimen/for_check_box"
+                        tools:ignore="RtlHardcoded" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Property details tab -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- arc -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:background="@drawable/bottom_red">
+
+                    <RelativeLayout
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/height_8"
+                        tools:ignore="RtlHardcoded,UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/height_10"
+                                android:paddingTop="@dimen/height_4"
+                                android:paddingRight="@dimen/height_0"
+                                android:paddingBottom="@dimen/height_4"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_property_details"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/property_details"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="UnusedAttribute" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="-0dp"
+                                android:layout_weight="0.5"
+                                tools:ignore="RtlHardcoded">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:padding="0dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/cutlayout_dummy"
+                                    tools:ignore="ContentDescription" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/reportname_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:text="Report Name: "
+                        android:layout_marginRight="@dimen/height_4"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:layout_toLeftOf="@+id/reportname_text"
+                        tools:ignore="HardcodedText,InconsistentLayout" />
+
+                    <TextView
+                        android:id="@+id/reportname_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textColor="@color/font_1"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText,InconsistentLayout" />
+
+                </RelativeLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fragment_property_type_insert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/div_interior_exterior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/textview_interior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginTop="@dimen/height_15"
+                        android:text="@string/interior"
+                        android:textColor="@color/font_heading"
+                        android:textSize="@dimen/font_samll"
+                        android:textStyle="normal"
+                        tools:ignore="RtlHardcoded" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/textview_flooring"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/flooring"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_flooring_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/textview_roofing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/roofing"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_roofing_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/textview_paint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/paint"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_paint_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/textview_door"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/door"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_door_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/textview_windows"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/windows"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_window_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/kitchenshape"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/kitchenshape"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_kitchenshape"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/kitchentype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/kitchentype"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_kitchentype"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/bathflooring"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/bathflooring"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_bathflooring"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/wc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/wc"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_wc_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/textview_pop"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_toLeftOf="@+id/id_radiogroup_pop"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/height_6"
+                                android:text="@string/pop"
+                                android:textColor="@color/font_heading"
+                                android:textSize="@dimen/miniut_small"
+                                android:textStyle="normal"
+                                tools:ignore="RtlHardcoded" />
+
+                            <RadioGroup
+                                android:id="@+id/id_radiogroup_pop"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                tools:ignore="RtlHardcoded">
+
+                                <RadioButton
+                                    android:id="@+id/id_radio_pop_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/yes" />
+
+                                <RadioButton
+                                    android:id="@+id/id_radio_pop_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/height_15"
+                                    android:checked="false"
+                                    android:text="@string/no"
+                                    tools:ignore="RtlHardcoded" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <!--<FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/text_pop_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/pop"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_pop_new"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>-->
+
+
+                        <!--<FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/wc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/wc"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_wc_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>-->
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textview_exterior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:text="@string/exterior"
+                        android:textColor="@color/font_heading"
+                        android:textSize="@dimen/font_samll"
+                        android:textStyle="normal"
+                        tools:ignore="RtlHardcoded" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/typeofstructure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/typeofstructure"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+
+                            <TextView
+                                android:id="@+id/textview_exter_struc_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/exteriorpaint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/exteriorpaint"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+
+                            <TextView
+                                android:id="@+id/textview_exter_paint_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/qualityofconstruction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/qualityofconstruction"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_qualityofconstruction"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/typeofbuilding"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/typeofbuilding"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_typeofbuilding"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/maintenanceofbuilding"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/maintenanceofbuilding"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_maintenanceofbuilding"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_liftinbuilding"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="RtlHardcoded">
+
+                            <EditText
+                                android:id="@+id/editText_liftinbuilding"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/liftinbuilding"
+                                android:inputType="text"
+                                android:maxLength="100"
+                                tools:ignore="InconsistentLayout" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <!--<FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/liftinbuilding"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/liftinbuilding"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small" />
+
+                            <Spinner
+                                android:id="@+id/spinner_liftinbuilding"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null" />
+
+                            <ImageView style="@style/StyledImagedown_large" />
+                        </FrameLayout>-->
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/qualityoffittings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/qualityoffittings"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_qualityoffittings"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/marketability"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/marketability"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_marketability"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            android:visibility="invisible"
+                            tools:ignore="RtlHardcoded">
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Valuation details tab -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- arc -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:background="@drawable/bottom_red">
+
+                    <RelativeLayout
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/height_8"
+                        tools:ignore="RtlHardcoded,UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/height_10"
+                                android:paddingTop="@dimen/height_4"
+                                android:paddingRight="@dimen/height_0"
+                                android:paddingBottom="@dimen/height_4"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_valuation_details"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/valuation_details"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="UnusedAttribute" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="-0dp"
+                                android:layout_weight="0.5"
+                                tools:ignore="RtlHardcoded">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:padding="0dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/cutlayout_dummy"
+                                    tools:ignore="ContentDescription" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- Fragment - Insert valution Details -->
+                <FrameLayout
+                    android:id="@+id/fragment_valuation_type_insert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="InconsistentLayout"></FrameLayout>
+
+            </LinearLayout>
+
+            <!-- Remarks details tab -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- arc -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:background="@drawable/bottom_red">
+
+                    <RelativeLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/height_8"
+                        tools:ignore="RtlHardcoded,UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/height_10"
+                                android:paddingTop="@dimen/height_4"
+                                android:paddingRight="@dimen/height_0"
+                                android:paddingBottom="@dimen/height_4"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_remarks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/remarks"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="UnusedAttribute" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="-0dp"
+                                android:layout_weight="0.5"
+                                tools:ignore="RtlHardcoded">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:padding="0dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/cutlayout_dummy"
+                                    tools:ignore="ContentDescription" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_5"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_additional_remarks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/height_18"
+                        android:layout_weight="1"
+                        tools:ignore="RtlHardcoded">
+
+                        <EditText
+                            android:id="@+id/editText_additional_remarks"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/additional_remarks"
+                            android:inputType="textCapWords" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_special_remarks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_special_remarks"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/special_remarks"
+                            android:inputType="textCapWords"
+                            android:nextFocusForward="@+id/editText_brokername" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    tools:ignore="InconsistentLayout"></androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!-- Broker Details details tab -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- arc -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:background="@drawable/bottom_red">
+
+                    <RelativeLayout
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/height_8"
+                        tools:ignore="RtlHardcoded,UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/height_10"
+                                android:paddingTop="@dimen/height_4"
+                                android:paddingRight="@dimen/height_0"
+                                android:paddingBottom="@dimen/height_4"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_broker"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/brokerdetails"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="InconsistentLayout,UnusedAttribute" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="-0dp"
+                                android:layout_weight="0.5"
+                                tools:ignore="RtlHardcoded">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:padding="0dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/cutlayout_dummy"
+                                    tools:ignore="ContentDescription" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_5"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_brokername"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_brokername"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/brokername"
+                            android:inputType="textCapWords"
+                            android:maxLength="100"
+                            tools:ignore="InconsistentLayout" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_brokernumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        android:paddingRight="@dimen/height_5"
+                        android:textColorHint="@color/font_texthint">
+
+                        <EditText
+                            android:id="@+id/editText_brokernumber"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/brokernumber"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            tools:ignore="InconsistentLayout" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_brokervalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        android:textColorHint="@color/font_texthint"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_brokervalue"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/brokervalue"
+                            android:inputType="textCapWords"
+                            android:maxLength="100"
+                            tools:ignore="InconsistentLayout" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- More Heading -->
+            <RelativeLayout
+                android:id="@+id/relative_more_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_3"
+                android:visibility="visible"
+                tools:ignore="InconsistentLayout">
+
+                <!-- arc -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_5"
+                    android:background="@drawable/bottom_red">
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/height_8"
+                        tools:ignore="RtlHardcoded,UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorPrimary"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/height_10"
+                                android:paddingTop="@dimen/height_4"
+                                android:paddingRight="@dimen/height_0"
+                                android:paddingBottom="@dimen/height_4"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_more_info"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/more_info"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="UnusedAttribute" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="-0dp"
+                                android:layout_weight="0.5"
+                                tools:ignore="RtlHardcoded">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:padding="0dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/cutlayout_dummy"
+                                    tools:ignore="ContentDescription" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/icon_more"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/height_3"
+                    android:layout_marginRight="@dimen/height_4"
+                    android:padding="@dimen/height_1"
+                    app:srcCompat="@drawable/icon_more"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            </RelativeLayout>
+
+            <!-- More details tab -->
+            <LinearLayout
+                android:id="@+id/linear_more_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_5"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_municipal_ward"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_municipal_ward"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/municipal_ward"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_taluka_mandal_tehsil"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        android:paddingRight="@dimen/height_5">
+
+                        <EditText
+                            android:id="@+id/editText_taluka_mandal_tehsil"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/taluka_mandal_tehsil"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_villagename"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_villagename"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/villagename"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_district"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_district"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/district"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_surveyno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        android:paddingRight="@dimen/height_5">
+
+                        <EditText
+                            android:id="@+id/editText_surveyno"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/surveyno"
+                            android:inputType="textCapWords"
+                            android:maxLength="50" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/height_8"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/bottom_grey"
+                        tools:ignore="RtlHardcoded">
+
+                        <Spinner
+                            android:id="@+id/spinner_nameofvendor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:background="@null"
+                            android:spinnerMode="dialog"
+                            tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            android:layout_marginTop="6dp"
+                            tools:ignore="ContentDescription" />
+                    </FrameLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_vendor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/editText_vendor"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/nameofvendor"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- hide the nameofseller -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/height_8"
+                        android:layout_marginRight="@dimen/height_3"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/bottom_grey"
+                        android:visibility="gone"
+                        tools:ignore="RtlHardcoded">
+
+                        <Spinner
+                            android:id="@+id/spinner_nameofseller"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:background="@null"
+                            android:spinnerMode="dialog"
+                            tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            android:layout_marginTop="6dp"
+                            tools:ignore="ContentDescription" />
+                    </FrameLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_nameofseller"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editText_nameofseller"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/nameofseller"
+                            android:inputType="textCapWords"
+                            android:maxLength="100" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!-- hide the nameofseller -->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_unitno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_unitno"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/unitno"
+                            android:inputType="textCapWords"
+                            android:maxLength="15" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_ctsno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        android:paddingRight="@dimen/height_5">
+
+                        <EditText
+                            android:id="@+id/editText_ctsno"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/ctsno"
+                            android:inputType="textCapWords"
+                            android:maxLength="50" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_colony_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <EditText
+                            android:id="@+id/editText_colony_name"
+                            style="@style/StyledTilEditText"
+                            android:hint="@string/colony_name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_info_land"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_wingno"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="@dimen/height_5"
+                            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                            <EditText
+                                android:id="@+id/editText_wingno"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/wingno_ka"
+                                android:inputType="number"
+                                android:maxLength="2" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_year_of_current_tenancy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/height_5"
+                            android:paddingRight="@dimen/height_5">
+
+                            <EditText
+                                android:id="@+id/editText_year_of_current_tenancy"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/year_of_current_tenancy"
+                                android:inputType="text"
+                                android:maxLength="100" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_amenities"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/height_5"
+                            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                            <EditText
+                                android:id="@+id/editText_amenities"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/amenities"
+                                android:inputType="textCapWords"
+                                android:maxLength="150" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_rentalincome"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="@dimen/height_5"
+                            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                            <EditText
+                                android:id="@+id/editText_rentalincome"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/rentalincome"
+                                android:inputType="text"
+                                android:maxLength="30" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_wing_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/height_5"
+                            android:paddingRight="@dimen/height_5">
+
+                            <EditText
+                                android:id="@+id/editText_wing_name"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/wing_name"
+                                android:inputType="textCapWords"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_floor_height"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/height_5"
+                            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                            <EditText
+                                android:id="@+id/editText_floor_height"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/floor_height"
+                                android:inputType="textCapWords"
+                                android:maxLength="18"
+                                tools:ignore="TextFields" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_nameoftenant"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="@dimen/height_0"
+                            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                            <EditText
+                                android:id="@+id/editText_nameoftenant"
+                                style="@style/StyledTilEditText"
+                                android:hint="@string/nameoftenant"
+                                android:inputType="text"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_15"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/passagecorridorschowklobby"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/passagecorridorschowklobby"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_passagecorridorschowklobby"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_1"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/amenitiesquality"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/amenitiesquality"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_amenitiesquality"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_3"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_1"
+                            android:layout_marginRight="@dimen/height_5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/wateravailabilty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/wateravailabilty"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_wateravailabilty_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_12"
+                            android:layout_marginRight="@dimen/height_12"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey">
+
+                            <TextView
+                                android:id="@+id/pavingaroundbuilding"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/pavingaroundbuilding"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <!--<Spinner
+                                android:id="@+id/spinner_pavingaroundbuilding"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                tools:ignore="InconsistentLayout" />-->
+
+                            <TextView
+                                android:id="@+id/textview_pavingaroundbuilding"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_5"
+                            android:layout_marginRight="@dimen/height_1"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/carparking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/carparking"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_carparking_text"
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_5"
+                            android:layout_marginRight="@dimen/height_1"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom_grey"
+                            android:visibility="invisible"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/wateravailabilty"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/miniut_small"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                style="@style/StyledTilText_multicheck"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded" />
+
+                            <ImageView
+                                style="@style/StyledImagedown_large"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_4"
+                        android:layout_marginBottom="@dimen/height_4"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/height_4"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/textview_garden_exists"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/height_8"
+                                android:text="@string/garden_exists"
+                                android:textColor="@color/font_heading"
+                                android:textSize="@dimen/font_samll"
+                                android:textStyle="normal"
+                                tools:ignore="RtlHardcoded" />
+
+                            <RadioGroup
+                                android:id="@+id/id_radiogroup_garden_exists"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textview_garden_exists"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                tools:ignore="RtlHardcoded">
+
+                                <RadioButton
+                                    android:id="@+id/id_radio_garden_exists_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/yes" />
+
+                                <RadioButton
+                                    android:id="@+id/id_radio_garden_exists_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/height_15"
+                                    android:checked="false"
+                                    android:text="@string/no"
+                                    tools:ignore="RtlHardcoded" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="1.2">
+
+                            <FrameLayout
+                                android:id="@+id/type_of_compound_div"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/height_12"
+                                android:layout_marginRight="@dimen/height_4"
+                                android:layout_weight="1"
+                                android:background="@drawable/bottom_grey"
+                                android:visibility="gone"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_type_of_compound"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/height_3"
+                                    android:gravity="left"
+                                    android:text="@string/type_of_compound"
+                                    android:textColor="@color/font_text_minor_heading"
+                                    android:textSize="@dimen/miniut_small"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_type_of_compound"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null" />
+
+                                <ImageView
+                                    style="@style/StyledImagedown_large"
+                                    android:layout_marginTop="@dimen/height_8"
+                                    tools:ignore="ContentDescription" />
+
+                            </FrameLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/height_4"
+                                android:layout_toLeftOf="@+id/type_of_compound_div"
+                                android:gravity="right"
+                                android:orientation="vertical"
+                                tools:ignore="RtlHardcoded">
+
+                                <TextView
+                                    android:id="@+id/textview_separatecompound"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/id_radiogroup_separatecompound"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:paddingLeft="@dimen/height_8"
+                                    android:text="@string/separatecompound"
+                                    android:textColor="@color/font_heading"
+                                    android:textSize="@dimen/font_samll"
+                                    android:textStyle="normal"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <RadioGroup
+                                    android:id="@+id/id_radiogroup_separatecompound"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:orientation="horizontal"
+                                    tools:ignore="RtlHardcoded">
+
+                                    <RadioButton
+                                        android:id="@+id/id_radio_separatecompound_yes"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="false"
+                                        android:text="@string/yes" />
+
+                                    <RadioButton
+                                        android:id="@+id/id_radio_separatecompound_no"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/height_15"
+                                        android:checked="false"
+                                        android:text="@string/no"
+                                        tools:ignore="RtlHardcoded" />
+                                </RadioGroup>
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- locality for LAND -->
+                <LinearLayout
+                    android:id="@+id/div_typeoflocality_for_land"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_3"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="3"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/bottom_grey"
+                        tools:ignore="InefficientWeight,UselessParent">
+
+                        <TextView
+                            android:id="@+id/typeoflocality_for_land"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_3"
+                            android:gravity="left"
+                            android:text="@string/typeoflocality"
+                            android:textColor="@color/font_text_minor_heading"
+                            android:textSize="@dimen/miniut_small"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Spinner
+                            android:id="@+id/spinner_typeoflocality_for_land"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null" />
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            tools:ignore="ContentDescription" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_30"
+                android:layout_marginBottom="@dimen/height_30">
+                <!-- Save button -->
+
+                <TextView
+                    android:id="@+id/textview_save_bottom_dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/height_12"
+                    android:layout_toLeftOf="@+id/textview_save_bottom"
+                    android:background="@drawable/buttonshape"
+                    android:backgroundTint="@color/green"
+                    android:paddingLeft="@dimen/height_25"
+                    android:paddingTop="@dimen/height_4"
+                    android:paddingRight="@dimen/height_25"
+                    android:paddingBottom="@dimen/height_4"
+                    android:text="@string/save_dashboard"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="InconsistentLayout,RtlHardcoded,UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/textview_save_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/buttonshape"
+                    android:backgroundTint="@color/green"
+                    android:paddingLeft="@dimen/height_25"
+                    android:paddingTop="@dimen/height_4"
+                    android:paddingRight="@dimen/height_25"
+                    android:paddingBottom="@dimen/height_4"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="RtlHardcoded,UnusedAttribute" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+

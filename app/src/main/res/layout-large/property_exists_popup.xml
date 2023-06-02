@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/property_exists_text"
+            android:textColor="@color/Activite"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="InconsistentLayout">
+
+            <FrameLayout
+                android:layout_width="346dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_15"
+                android:layout_marginRight="@dimen/height_15"
+                android:layout_weight="4.1"
+                android:background="@drawable/bottom_grey"
+                tools:ignore="InefficientWeight,UselessParent">
+
+                <Spinner
+                    android:id="@+id/spinner_reject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white"
+                    android:popupBackground="@color/white"
+                    tools:ignore="InconsistentLayout" />
+
+                <ImageView
+                    style="@style/StyledImagedown_large"
+                    android:layout_marginBottom="2dp"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/noBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/strokeshape_bg"
+                android:gravity="center"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:text="NO"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/yesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttonshape"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/White"
+                android:text="YES"
+                android:textSize="16sp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutCheckbox"
+        android:layout_width="450dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/case_transfer"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/Activite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You want to transfer Mr.SounderRajan case to"
+            android:textAlignment="center"
+            android:textColor="@color/Activite"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/offlineViewCaseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvFieldStaff"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="@string/field_staff"
+                    android:textColor="@color/Black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/height_5"
+                        android:layout_marginBottom="@dimen/height_5"
+                        android:layout_weight="1.35"
+                        android:background="@drawable/edittext_bg">
+
+                        <Spinner
+                            android:id="@+id/spinner_FieldStaff"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:paddingTop="@dimen/height_8"
+                            android:spinnerMode="dropdown" />
+
+
+                        <ImageView
+                            style="@style/StyledImagedown_large"
+                            android:layout_marginTop="@dimen/height_5"
+                            tools:ignore="ContentDescription" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/noBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/strokeshape_bg"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/cancel_"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/yesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/buttonshape"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/transfer"
+            android:textColor="@color/White"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

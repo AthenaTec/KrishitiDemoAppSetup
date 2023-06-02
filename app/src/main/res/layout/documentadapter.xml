@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingTop="@dimen/height_10"
+        android:paddingBottom="@dimen/height_10"
+        android:id="@+id/documentparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/documenttittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/height_2"
+            android:layout_marginEnd="@dimen/height_10"
+            android:layout_marginStart="@dimen/height_20"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_weight="1"
+            android:text="Document Name"
+            android:textColor="@color/Activite"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,InefficientWeight" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="@dimen/height_20"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/eye"
+            android:backgroundTint="@color/colorPrimary"
+            android:visibility="gone"
+            tools:ignore="ContentDescription,UnusedAttribute" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_1"
+        android:layout_marginTop="@dimen/height_2"
+        android:background="@color/line" />
+</LinearLayout>

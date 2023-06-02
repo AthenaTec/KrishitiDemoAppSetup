@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear_permissiblearea_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/height_1"
+        android:layout_marginRight="@dimen/height_1"
+        android:layout_marginTop="@dimen/height_5"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/textview_permissiblearea_floor"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:inputType="text"
+            android:paddingRight="@dimen/height_2"
+            android:text=""
+            android:textSize="@dimen/font_samll"
+            tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+        <TextView
+            android:id="@+id/textview_permissiblearea_unit"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:inputType="text"
+            android:paddingLeft="@dimen/height_2"
+            android:paddingRight="@dimen/height_2"
+            android:text=""
+            android:textSize="@dimen/font_samll"
+            tools:ignore="TextViewEdits" />
+
+
+        <EditText
+            android:id="@+id/edittext_permissiblearea_rate"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_4"
+            android:layout_weight="1.2"
+            android:maxLength="10"
+            android:inputType="number"
+            android:nextFocusForward="@+id/edittext_permissiblearea_dep_per"
+            android:paddingLeft="@dimen/height_2"
+            android:paddingRight="@dimen/height_2"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/textview_permissiblearea_value"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_8"
+            android:layout_weight="1.3"
+            android:gravity="left"
+            android:inputType="text"
+            android:paddingLeft="@dimen/height_2"
+            android:paddingRight="@dimen/height_2"
+            android:text=""
+            android:textSize="@dimen/font_samll"
+            tools:ignore="RtlHardcoded,TextViewEdits" />
+
+
+        <EditText
+            android:id="@+id/edittext_permissiblearea_dep_per"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingLeft="@dimen/height_4"
+            android:paddingRight="@dimen/height_2"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textview_permissiblearea_dep_value"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_8"
+            android:layout_weight="1.2"
+            android:inputType="text"
+            android:paddingLeft="@dimen/height_12"
+            android:text=""
+            android:textSize="@dimen/font_samll"
+            tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+    </LinearLayout>
+</LinearLayout>

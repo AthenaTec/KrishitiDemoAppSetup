@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/stage_type"
+                android:textColor="@color/Activite"
+                android:layout_centerVertical="true"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/height_9"
+                app:srcCompat="@drawable/close"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/id_radiogroup_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height_4"
+                android:layout_marginTop="@dimen/height_4"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RadioButton
+                    android:id="@+id/id_radio_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="Select"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="0%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="5%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="10%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+
+                <RadioButton
+                    android:id="@+id/id_radio_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="15%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="20%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="25%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="30%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="35%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="40%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_45"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="45%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="50%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_55"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="55%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+
+                <RadioButton
+                    android:id="@+id/id_radio_60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="60%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_65"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="65%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_70"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="70%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_75"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_8"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="75%"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

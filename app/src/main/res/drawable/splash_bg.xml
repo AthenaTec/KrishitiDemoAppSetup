@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/colorAccent" />
+
+    <item>
+        <rotate
+            android:fromDegrees="28"
+            android:pivotX="1%"
+            android:pivotY="100%"
+            android:toDegrees="360">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorPrimaryDark" />
+
+            </shape>
+
+        </rotate>
+    </item>
+    <item>
+        <rotate
+            android:fromDegrees="26"
+            android:pivotX="82%"
+            android:pivotY="117%"
+            android:toDegrees="360">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorPrimaryDark" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

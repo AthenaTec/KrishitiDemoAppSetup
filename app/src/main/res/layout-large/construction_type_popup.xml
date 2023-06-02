@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/stage_type"
+                android:textColor="@color/Activite"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/close"
+                app:srcCompat="@drawable/close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/height_9"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/id_radiogroup_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height_4"
+                android:layout_marginTop="@dimen/height_4"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RadioButton
+                    android:id="@+id/id_radio_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_2"
+                    android:layout_marginBottom="@dimen/height_2"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="@string/complete"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/id_radio_underconstruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_2"
+                    android:layout_marginBottom="@dimen/height_2"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/height_8"
+                    android:text="@string/underconstruction"
+                    android:textSize="@dimen/font_medium"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

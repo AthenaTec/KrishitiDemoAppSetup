@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_5"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:id="@+id/edittext_general_floor_name"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:maxLength="25"
+            android:selectAllOnFocus="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_weight="0.6"
+            android:background="@drawable/bottom_grey"
+            tools:ignore="RtlHardcoded">
+
+            <!--<Spinner
+                style="@style/StyledTilText_multicheck"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/spinner_stage" />-->
+
+            <TextView
+                android:id="@+id/spinner_stage"
+                style="@style/StyledTilText_multicheck"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:text="Select"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <ImageView style="@style/StyledImagedown_internal"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+
+        <EditText
+            android:id="@+id/edittext_general_comp"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="0.7"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusForward="@+id/edittext_general_progress"
+            android:singleLine="true"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edittext_general_progress"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="0.8"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:maxLength="100"
+            android:nextFocusForward="@+id/edittext_general_doc_area"
+            android:singleLine="true"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edittext_general_doc_area"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="0.8"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:nextFocusForward="@+id/edittext_general_actual_area"
+            android:singleLine="true"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edittext_general_actual_area"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="0.8"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:nextFocusForward="@+id/edittext_general_age"
+            android:singleLine="true"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edittext_general_age"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="0.7"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:nextFocusForward="@+id/edittext_general_life"
+            android:singleLine="true"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edittext_general_life"
+            style="@style/StyledTilEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_marginRight="@dimen/height_2"
+            android:layout_weight="0.7"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="@dimen/font_samll"
+            tools:ignore="LabelFor" />
+
+        <FrameLayout
+            android:id="@+id/frameUsagelay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_weight="0.9"
+            android:background="@drawable/bottom_grey"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/spinner_general_floor_usage"
+                style="@style/StyledTilText_multicheck"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:text="Select"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <ImageView style="@style/StyledImagedown_internal"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

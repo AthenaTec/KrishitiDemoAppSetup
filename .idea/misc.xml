@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Workspace/Mobile Apps/RealAppraiser/app/src/main/res/layout/activity_place_picker.xml" value="0.2" />
+        <entry key="..\:/Workspace/Mobile Apps/RealAppraiser/app/src/main/res/layout/custom_info_window.xml" value="0.536" />
+        <entry key="..\:/Workspace/Mobile Apps/RealAppraiser/app/src/main/res/layout/place_prediction_item.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile Apps/RealAppraiser/app/src/main/res/menu/search_menu.xml" value="0.176" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/fragment_fragment_valuation_building.xml" value="0.2" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/fragment_fragment_valuation_land.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/fragment_fragment_valuation_land_ka.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/fragment_fragment_valuation_penthouse.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/home_screen.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/offine_case_adapter.xml" value="0.3009776536312849" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/others.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout-large/pedning_case_adapter.xml" value="0.37228260869565216" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/activity_fragment_building.xml" value="0.536" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/activity_fragment_building_ka.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/activity_fragment_flat.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/activity_fragment_flat_ka.xml" value="0.2" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/activity_fragment_land.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/fragment_fragment_valuation_building.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/fragment_fragment_valuation_land.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/fragment_fragment_valuation_land_ka.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/fragment_fragment_valuation_penthouse.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/home_screen.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/horizontal_imageadapter.xml" value="0.8800000000000001" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/imageclose.xml" value="0.23802083333333332" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/item_compare_property.xml" value="0.6" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/multiselect_checkbox.xml" value="0.2" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/offine_case_adapter.xml" value="0.536" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/open_case_adapter.xml" value="0.72" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/others.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/others_ka.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/pedning_case_adapter.xml" value="0.5223463687150838" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/photoandlatlng.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/photolatlng.xml" value="0.2" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/popup_compare_property_rate.xml" value="0.4" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/popup_transfercase.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/recyclerview_floors.xml" value="0.264" />
+        <entry key="..\:/Workspace/Mobile_Apps/RealAppraiser/app/src/main/res/layout/versionname_popup.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+</project>

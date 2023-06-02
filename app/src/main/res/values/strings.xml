@@ -1,0 +1,527 @@
+<!--suppress ALL -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Real Appraiser</string>
+    <string name="google_maps_key">AIzaSyB2GRdYUgnHaldFGXtSvq1qLsNxDx6ucvI</string>
+    <string name="url">Current Server URL</string>
+    <string name="realappraiser_brand">Real Appraiser All Rights Reserved \nDeveloped and Supported by Real Appraiser.</string>
+    <string name="serverProblem">Server Connection Problem</string>
+    <string name="validurl">Enter valid url</string>
+    <string name="http">https://</string>
+    <string name="addimage">ADD IMAGE</string>
+    <string name="forgotpwd" tools:ignore="UnusedResources"><i><u>Forgot Password</u></i></string>
+    <string name="seturl" tools:ignore="UnusedResources"><i><u>Set Server URL</u></i></string>
+    <string name="hi">Hi</string>
+    <string name="title">Real Appraiser</string>
+    <string name="latlng">LAT/LONG</string>
+    <string name="lat" tools:ignore="UnusedResources">Lat</string>
+    <string name="lng" tools:ignore="UnusedResources">Long</string>
+    <string name="case_id"></string>
+    <string name="case_date"></string>
+    <string name="case_time"></string>
+    <string name="pipesymbol">|</string>
+    <string name="bankname"></string>
+    <string name="casename"></string>
+    <string name="case_mobileno"></string>
+    <string name="case_addressloc"></string>
+    <string name="property_exists">Are you sure that property is not exists?</string>
+    <string name="property_exists_text">Are you sure that property is not exists?</string>
+    <string name="property_has_exists">Property exists</string>
+    <string name="property_not_exists">Property Doesn\'t exists</string>
+    <string name="caserejected">Case Rejected</string>
+    <string name="reject_text">Do you want to reject the case?</string>
+    <string name="admin_text">Do you want to send the case to Report maker?</string>
+    <string name="admin_text_kakode">Do you want to send the case to Case Admin?</string>
+    <string name="property_type">Select the property type for the Case Id : </string>
+    <string name="property_type_">Property Type</string>
+    <string name="image_view">Image Viewer for the Case Id : </string>
+    <string name="document_view">Document Viewer for the Case Id : </string>
+    <string name="exit_back">Please click BACK again to exit</string>
+    <string name="forgotpassword" tools:ignore="UnusedResources">Forgot Password</string>
+    <string name="property_type_head">Property Type :</string>
+    <string name="wrong_password">User ID or Password is wrong</string>
+    <string name="fetching_loca" tools:ignore="TypographyEllipsis">Fetching your current location. Please wait...</string>
+    <string name="fetching_prev_loca" tools:ignore="TypographyEllipsis">Fetching your previous marked location. Please wait...</string>
+    <string name="genearating_floors" tools:ignore="TypographyEllipsis">Generating your Floors. Please wait...</string>
+    <string name="stage_type">Stage type</string>
+    <string name="not_validuser">Not a valid user</string>
+    <string name="offlinecase_head">Select Cases</string>
+    <string name="noofflinecase">No More Cases to move Offline</string>
+    <string name="accept">ACCEPT</string>
+    <string name="reject">REJECT</string>
+    <string name="sync">SYNC</string>
+    <string name="start" tools:ignore="UnusedResources">START</string>
+    <string name="startInspection">START INSPECTION</string>
+    <string name="edit">EDIT</string>
+    <string name="send">SEND</string>
+    <string name="location_enable" tools:ignore="UnusedResources">Location Services Enable</string>
+    <string name="location_service" tools:ignore="UnusedResources">Real Appraiser shows your current location, please enable location authorisation</string>
+    <string name="enable" tools:ignore="UnusedResources">Turn on Location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="err_msg_serverurl">Enter Current Server Url</string>
+    <string name="err_msg_lastname" tools:ignore="UnusedResources">Enter your last name</string>
+    <string name="err_msg_company" tools:ignore="UnusedResources">Enter your Company name</string>
+    <string name="err_msg_mobile" tools:ignore="UnusedResources">Enter your mobile no.</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Enter the password</string>
+    <string name="err_ctmsg_password" tools:ignore="UnusedResources">Enter current password</string>
+    <string name="err_new_password" tools:ignore="UnusedResources">Enter new password</string>
+    <string name="err_msg_confirmpassword" tools:ignore="UnusedResources">Enter the confirm password</string>
+    <string name="err_msg_mismatchpassword" tools:ignore="UnusedResources">Oops, your confirm password mismatched</string>
+    <string name="open">OPEN</string>
+    <string name="close">CLOSED</string>
+    <string name="close_new">Close</string>
+    <string name="offline">OFFLINE</string>
+    <string name="pending">PENDING</string>
+    <string name="gooffline">GO OFFLINE</string>
+    <string name="cancel">CLOSE</string>
+    <string name="cancel_">CANCEL</string>
+    <string name="property_exits">19</string>
+    <string name="accept_status">13</string>
+    <string name="reject_status">15</string>
+    <string name="start_inspection" tools:ignore="UnusedResources">2</string>
+    <string name="edit_inspection">2</string>
+    <string name="send_to_admin">21</string>
+    <string name="send_to_admin_kakode">3</string>
+    <!-- Form Strings -->
+    <string name="save_dashboard">SAVE &amp; GOTO DASHBOARD</string>
+    <string name="save">SAVE</string>
+    <string name="next">NEXT</string>
+    <string name="address">ADDRESS</string>
+    <string name="addr_perdoc">Address per document*</string>
+    <string name="contact_person">Contact Person Name</string>
+    <string name="contact_phone">Contact Person Phone No</string>
+    <string name="addr_site">Address at Site/Actual*</string>
+    <string name="landmark">Landmark</string>
+    <string name="offlinecaselimited">Select the offline cases are equal to </string>
+    <string name="alreadyexceeded">Maximum offline cases reached! </string>
+    <string name="select_one_case">Select atleast one case</string>
+    <string name="synchedmsg">Case successfully synched to server</string>
+    <string name="same">Same</string>
+    <string name="servey_persence">Survey in presence of</string>
+    <string name="plotno">Plot No</string>
+    <string name="select_localitycate" tools:ignore="UnusedResources">Select Locality Category</string>
+    <string name="select_class" tools:ignore="UnusedResources">Select Class</string>
+    <string name="select">Select</string>
+    <string name="select_tenure_ownership" tools:ignore="UnusedResources">Select Tenure/Ownership</string>
+    <string name="landapproval">Land approval for</string>
+    <string name="property_identified">Property identified through</string>
+    <string name="persently_occupied">Presently Occupied</string>
+    <string name="condition_approad">Condition of Approach road</string>
+    <string name="localitycate">Locality Category</string>
+    <string name="class_head">Class</string>
+    <string name="tenureownership">Tenure / Ownership</string>
+    <string name="actualusage">Actual Usage</string>
+    <string name="documents">Property Documents</string>
+    <string name="enter_custom_valu_one" tools:ignore="UnusedResources">Enter Custom value</string>
+    <string name="document_boundary">Document Boundary</string>
+    <string name="actual_boundary">Actual Boundary</string>
+    <string name="same_as_docs">Same as Doc</string>
+    <string name="document_dimension">Document Dimension</string>
+    <string name="actual_dimension">Actual Dimension</string>
+    <string name="east">East</string>
+    <string name="west">West</string>
+    <string name="north">North</string>
+    <string name="south">South</string>
+    <string name="document_setback">Document Setback</string>
+    <string name="actual_setback">Actual Setback</string>
+    <string name="front">Front</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="rear">Rear</string>
+    <string name="proximity">Proximity</string>
+    <string name="proximities">Proximities</string>
+    <string name="name_head">Name</string>
+    <string name="km">Distance</string>
+    <string name="plot_demarcated">Plot demarcated at site</string>
+    <string name="isproperty_demolish">Is Property in demolish list?</string>
+    <string name="property_within_muni">Property with in Municipal Area</string>
+    <string name="property_details">Property Details</string>
+    <string name="is_compounded">Is Compounded?</string>
+    <string name="land_measurement">Land Measurement:</string>
+    <!--<string name="compound_permissiblearea">Compound / Permissible Area*</string>-->
+    <string name="compound_permissiblearea">Document Area*</string>
+    <string name="as_per_measurement">As Per Measurement*</string>
+    <string name="as_per_docs">As Per Document*</string>
+    <string name="measurement">Measurement</string>
+    <string name="construction_details">Construction Details:</string>
+    <string name="floors">#Floor(s)*</string>
+    <string name="approved_floors">#Approved Floors(s)*</string>
+    <string name="actual_usage" tools:ignore="UnusedResources">Actual Usage</string>
+    <string name="Floor_details">Floor Details</string>
+    <string name="land_area" tools:ignore="UnusedResources">Land Area</string>
+    <string name="floor_digits" tools:ignore="UnusedResources">1234567</string>
+    <string name="totalapartmentfloors">Apartment Floors</string>
+    <string name="totalapartment_no_floors_ka">Total No of Floors</string>
+    <string name="totalflatsperfloor">Flat / Floor</string>
+    <string name="totalflatsperfloor_ka">Total Flats Per Floor</string>
+    <string name="flatsituatedinfloor">Flat in Floors*</string>
+    <string name="flatsituatedinfloor_ka">Flat Situated In Floor*</string>
+    <string name="plot_area">Plot Area</string>
+    <string name="units">Unit</string>
+    <string name="title_photo">Title</string>
+    <string name="generl_info_measu">General Info and Measurement:</string>
+    <string name="generl_info" tools:ignore="UnusedResources">General Info:</string>
+    <string name="floor_name">Floor Name*</string>
+    <string name="floor_">Floor*</string>
+    <string name="stage">Stage*</string>
+    <string name="comp" tools:ignore="StringFormatInvalid">%Comp*</string>
+    <string name="progress">Progress</string>
+    <string name="doc_area">Doc Area</string>
+    <string name="per_area">Sanctioned Area</string>
+    <string name="actual_area">Actual Area</string>
+    <string name="age">Age</string>
+    <string name="life">Life</string>
+    <string name="floor_usage">Usage</string>
+    <string name="carpetarea">Carpet Area</string>
+    <string name="builduparea">Buildup Area</string>
+    <string name="saleablearea">Saleable Area</string>
+    <string name="general_floor_name">#Floor(s)*</string>
+    <string name="general_stage" tools:ignore="UnusedResources">Stage*</string>
+    <string name="general_comp" tools:ignore="UnusedResources">0%</string>
+    <string name="general_progress" tools:ignore="UnusedResources">Progress</string>
+    <string name="general_doc_area" tools:ignore="UnusedResources">0</string>
+    <string name="general_actual_area" tools:ignore="UnusedResources">0</string>
+    <string name="general_age" tools:ignore="UnusedResources">0</string>
+    <string name="general_life" tools:ignore="UnusedResources">0</string>
+    <string name="general_floor_usage" tools:ignore="UnusedResources">Select</string>
+    <string name="average">Average</string>
+    <string name="total">Total</string>
+    <string name="zero">0</string>
+    <string name="internal_composition">Internal Composition:</string>
+    <string name="floor_name_composition">Floor Name</string>
+    <string name="hall_dinning"># of Hall(s)/Dinning(s)</string>
+    <string name="kitchen"># of Kitchen(s)</string>
+    <string name="bedroom"># of Bedroom(s)</string>
+    <string name="bath"># of Bath(s)</string>
+    <string name="shop_office"># of Shop(s)/Office(s)</string>
+
+    <string name="of_dinning"># of Dinning(s)</string>
+    <string name="of_wc"># of WC(s)</string>
+    <string name="of_attachbath"># of Attach Bath(s)</string>
+    <string name="of_balcony"># of Balcony(s)</string>
+    <string name="of_fb"># of FB(s)</string>
+    <string name="of_db"># of DB(s)</string>
+    <string name="of_terrace"># of Terrace(s)</string>
+    <string name="of_passage"># of Passage(s)</string>
+
+    <string name="interior">Interior:</string>
+    <string name="exterior">Exterior:</string>
+    <string name="remarks">Remarks</string>
+    <string name="more_info">More Info</string>
+    <string name="valuation_details">Valuation details</string>
+    <string name="additional_remarks">Additional Remarks</string>
+    <string name="special_remarks">Special Remarks for report marker</string>
+    <string name="username" tools:ignore="UnusedResources">User Name</string>
+    <string name="password" tools:ignore="UnusedResources">Password</string>
+    <string name="enter_your_mail" tools:ignore="UnusedResources">Enter Your Email id</string>
+    <string name="enter_server_url" tools:ignore="TypographyEllipsis,UnusedResources">Enter Server URL here...</string>
+    <string name="municipal_ward">Municipal Ward</string>
+    <string name="taluka_mandal_tehsil">Taluka / Mandal / Tehsil</string>
+    <string name="villagename">Village Name</string>
+    <string name="district">District</string>
+    <string name="surveyno">Survey No (Hissa No.)</string>
+    <string name="nameofseller">Name of the seller</string>
+    <string name="nameofvendor">Name of the vendor</string>
+    <string name="unitno">Unit No (Flat/Office/Shop No)</string>
+    <string name="ctsno">CTS No</string>
+    <string name="wingno">Wing No</string>
+    <string name="wingno_ka">Number of wings</string>
+    <string name="colony_name">Colony Name</string>
+    <string name="year_of_current_tenancy">Year of current tenancy</string>
+    <string name="amenities">Amenities</string>
+    <string name="rentalincome">Rental Income</string>
+    <string name="nameoftenant">Name Of Tenant</string>
+    <string name="wing_name">Wing Name</string>
+    <string name="floor_height">Floor height</string>
+    <string name="pop">P.O.P</string>
+    <string name="garden_exists">Garden Exists</string>
+    <string name="separatecompound">Separate Compound</string>
+    <!-- more details - drop down -->
+    <string name="passage_corridors" tools:ignore="UnusedResources">Passage/Corridors/Chowk/Lobby</string>
+    <string name="type_of_locality" tools:ignore="UnusedResources">Type of locality</string>
+    <string name="bath_flooring" tools:ignore="UnusedResources">Bath Flooring</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="complete">Complete</string>
+    <string name="underconstruction">Under Construction</string>
+    <string name="flooring">Flooring</string>
+    <string name="door">Door</string>
+    <string name="roofing">Roofing</string>
+    <string name="paint">Paint</string>
+    <string name="windows">Windows</string>
+    <string name="typeofstructure">Type Of Structure</string>
+    <string name="exteriorpaint">Exterior Paint</string>
+    <string name="qualityofconstruction">Quality Of Construction</string>
+    <string name="typeofbuilding">Type Of Building</string>
+    <string name="maintenanceofbuilding">Maintenance Of Building</string>
+    <string name="liftinbuilding">Lift In Building</string>
+    <string name="qualityoffittings">Quality of Fittings</string>
+    <string name="marketability">Marketability</string>
+    <string name="passagecorridorschowklobby">Passage/Corridors/Chowk/Lobby</string>
+    <string name="typeoflocality">Type of locality</string>
+    <string name="bathflooring">Bath Flooring</string>
+    <string name="amenitiesquality">Amenities Quality</string>
+    <string name="kitchentype">Kitchen Type</string>
+    <string name="wateravailabilty">Water Availabilty</string>
+    <string name="wc">W.C</string>
+    <string name="pavingaroundbuilding">Paving Around Building</string>
+    <string name="kitchenshape">Kitchen Shape</string>
+    <string name="carparking">Car Parking</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+
+    <!-- valuation-->
+    <string name="landvaluation">Land Valuation:</string>
+    <string name="guideline_rate">Guideline / DLC Rate:</string>
+    <string name="guideline_value">Guideline DLC Value:</string>
+    <string name="unit">Unit</string>
+    <string name="considerforvaluation" tools:ignore="UnusedResources">Consider For Valuation</string>
+    <string name="considerforvaluation_permissible">Permissible Area</string>
+    <string name="considerforvaluation_actual">Actual Area</string>
+    <string name="permissiblearea">Permissible Area</string>
+    <string name="documentarea">Document Area</string>
+    <string name="asperdocumentarea">As Per Document</string>
+    <string name="actualarea">Actual Area</string>
+    <string name="rate">Rate</string>
+    <string name="rate_sqft">Rate / Sq.ft</string>
+    <string name="rate_sqm">Rate / Sq.m</string>
+    <string name="constructionvaluation">Construction Valuation:</string>
+    <string name="construction_rate">Construction / DLC Rate</string>
+    <string name="construction_value">Construction DLC Value</string>
+    <string name="totalconstructionvalue">Total Construction Value</string>
+    <string name="additional_description">Additional Description</string>
+    <string name="totalpropertyvalue">Total Property Value</string>
+    <string name="aspercompletion">As Per Completion</string>
+    <string name="custom">Custom</string>
+    <string name="insurancevaluepe">Insurance value as per construction value considered</string>
+    <string name="proposedvaluation">Proposed Valuation(Rate)</string>
+    <string name="loading_per">Loading Over Build-up %</string>
+    <string name="realizable_per">Realizable %</string>
+    <string name="realizable_per_completion">Realizable % on completion</string>
+    <string name="realizable_per_inspection">Realizable % as on date of inspection</string>
+    <string name="scaleable_loading">Saleable Loading %</string>
+    <string name="distress_per">Distress %</string>
+    <string name="distress_per_completion">Distress % on completion</string>
+    <string name="distress_per_inspection">Distress % as on date of inspection</string>
+    <string name="carpet_per">Carpet %</string>
+    <string name="carpet_per_type">Carpet Type</string>
+    <string name="floor">#Floor</string>
+    <string name="value">Value</string>
+    <string name="dep_per">% Dep</string>
+    <string name="depvalue">Dep Value</string>
+    <string name="carpet_area">Carpet Area</string>
+    <string name="builtup_area">Built up Area</string>
+    <string name="Saleable_area">Saleable Area</string>
+    <string name="area_measurment">Area Measurements:</string>
+    <string name="area">Area</string>
+    <string name="measurementunit">Measurement Unit</string>
+    <string name="carpet">Carpet</string>
+    <string name="builtup" tools:ignore="UnusedResources">Built up</string>
+    <string name="Saleable" tools:ignore="UnusedResources">Saleable</string>
+    <string name="current_fair">*Current Fair Market Value:</string>
+    <string name="areatype">Area Type</string>
+    <string name="marketrate">*Market Rate</string>
+    <string name="marketvalue">Market Value</string>
+    <string name="terrace">*Terrace</string>
+    <string name="terrace_kakode">Terrace</string>
+    <string name="insurance">Insurance</string>
+    <string name="dlcrate">DLC Rate</string>
+    <string name="governmentvalue">Government Value</string>
+    <string name="governmentarea">Government Area</string>
+    <string name="loadingoverbuildup">Loading Over Build-up</string>
+    <string name="loadingovercarpet">Loading Over Carpet</string>
+    <string name="realizable">Realizable &amp; Distress Value:</string>
+    <string name="distress_val">Distress Value:</string>
+    <string name="realizable_distress">Realizable &amp; Distress(%)</string>
+    <string name="realizable_value">Realizable Value</string>
+    <string name="distress">Distress</string>
+    <string name="distress_value">Distress value</string>
+    <string name="exit">Are you sure you want to Exit?</string>
+    <string name="sameabove">Same as above</string>
+    <string name="floorname">Floor</string>
+    <string name="err_generalfloors" tools:ignore="UnusedResources">Enter Floors Mandatory fields</string>
+    <string name="err_floorsno" tools:ignore="UnusedResources">Enter floors number</string>
+    <string name="err_mandatoryflds" tools:ignore="UnusedResources">Enter all mandatory fields</string>
+    <string name="dot">-</string>
+    <string name="nochanges">Save the details before exit</string>
+    <string name="err_lat_long" tools:ignore="UnusedResources">Enter the Latitude and Longitude</string>
+    <string name="nameof_seller">Name of Seller</string>
+    <string name="save_message">Would you like to?</string>
+    <string name="brokerdetails">BROKER DETAILS</string>
+    <string name="brokername">Broker Name</string>
+    <string name="brokernumber">Broker Contact Number</string>
+    <string name="brokervalue">Proposed value range</string>
+    <string name="property_type_cant">Property type Can\'t be changed in edit mode</string>
+    <string name="muliple_gallery">Pick Multiple Photos from Gallery</string>
+    <string name="done">DONE</string>
+    <string name="permission_rationale">"Storage permission is needed for fetching images from Gallery."</string>
+
+    <!-- Error message -->
+    <string name="error_lat">Enter the Latitude</string>
+    <string name="error_long">Enter the Longitude</string>
+    <string name="error_oneimage">*Add at least one image</string>
+    <string name="err_addperdoc">Please enter Address per document</string>
+    <string name="err_addrsite">Please enter Address at actual/Site</string>
+    <string name="err_comp_permis">Please enter compound/permissible area</string>
+    <string name="err_aspermeasu">Please enter as per Measurement</string>
+    <string name="err_measure_land">*Please select measurement unit for land</string>
+    <string name="err_measure_construction">*Please select measurement unit for construction</string>
+    <string name="err_measure_construct">Please select measurement unit for construction</string>
+    <string name="err_no_floor">Please enter no of floors</string>
+    <string name="err_msg_genera_floors">Please Generate your Floors</string>
+    <string name="err_msg_enter_floor_name">Please enter your floor name</string>
+    <string name="err_msg_stagetype">Stage type is mandatory</string>
+    <string name="err_msg_percentage_completion">Percentage Completion is mandatory</string>
+    <string name="err_genea_floors_check">Kindly generate the floors as per Floor(s)</string>
+    <string name="sizelimit">Photo Size exceeds limitation of 20 count</string>
+    <string name="imagelimit" tools:ignore="UnusedResources">Select 5 images at a time</string>
+    <string name="selectmsg">Select atleast one image</string>
+    <string name="samefloornumbers">Already the Generated floors list are equal</string>
+    <string name="deleting_floors" tools:ignore="TypographyEllipsis">Removing floors as per your request. Please wait...</string>
+    <string name="only_12floor" tools:ignore="Typos">Kindly generate upto 12 Floor(s)</string>
+    <string name="enter_name_dis">Please Enter Name or Distance</string>
+    <string name="enter_name_dis_ka">Please Enter Name or Distance</string>
+    <string name="proximity_added">Proximity Row added</string>
+    <string name="proximity_reached">Max proximity reached</string>
+    <string name="error_mobile_number">Please enter 10 digits mobile number</string>
+    <string name="err_flatsituated">Enter flat sitauted in floors</string>
+    <string name="err_construction_stage">Select construction stage in property details</string>
+    <string name="err_percentage_completion">Enter Percentage Completion</string>
+    <string name="terracearea">Enter the terrace area</string>
+    <string name="terracerate">Enter the terrace rate</string>
+    <!--<string name="error_land_comd">Please enter Compound / Permissible Area*</string>-->
+    <string name="error_land_comd">Please enter document area*</string>
+    <string name="error_land_mease">Please enter As Per Measurement</string>
+    <string name="error_land_mease_unit">Please select measurement unit </string>
+    <string name="case_save_offline">Case saved to offline</string>
+    <string name="case_send_wait">Please wait...</string>
+    <string name="case_send_photo">Syncing the photo...</string>
+    <string name="case_send_details">Syncing the details...</string>
+    <string name="file_large">File is too large to open in offline...</string>
+    <string name="no_data_found_open">No Open Case Found</string>
+    <string name="no_data_found_close">No Close Case Found</string>
+    <string name="no_data_found_offline">No Offline Case Found</string>
+    <string name="no_data_found_pending">No Pending Case Found</string>
+    <string name="case_moved_offline">Cases moved to offline. Kindly Proceed further</string>
+
+    <string name="mandatory_field">All mandatory fields are necessary for send the case to Report maker. Kindly Proceed further</string>
+    <string name="mandatory_fieldmsg">Please enter all mandatory fields for the case before sending it to report maker.</string>
+    <string name="mandatory_fieldmsg_kakode">Please enter all mandatory fields for the case before sending it to case admin.</string>
+    <string name="backspace"><![CDATA[<<]]></string>
+    <string name="ok">OK</string>
+
+    <string name="saleable_load_percentage">Saleable Loading %</string>
+    <string name="dinning"># of Dining(s)</string>
+    <string name="wcs"># of WC(s)</string>
+    <string name="attachbath"># of Attach bath(s)</string>
+    <string name="balcony"># of Balcony(s)</string>
+    <string name="fbs"># of FB(s)</string>
+    <string name="dbs"># of DB(s)</string>
+    <string name="terraceinternal"># of Terrace(s)</string>
+    <string name="passage"># of Passage(s)</string>
+    <string name="hall"># of Hall(s)</string>
+    <string name="balconyarea">Balcony</string>
+    <string name="terraceareas">Terrace Area</string>
+    <string name="balconyareas">Balcony Area</string>
+    <string name="saleable_percent">Saleable % Loading</string>
+    <string name="pops">POP</string>
+    <string name="one_photo">Kindly select one photo to proceed</string>
+
+    <string name="doors">Doors</string>
+    <string name="enterbalcony">Enter the balcony area</string>
+
+    <string name="landarea_des">Land Area Description</string>
+    <string name="oncompletion">On completion with its amenities</string>
+    <string name="dateofinspection">As on date of inspection</string>
+    <string name="additional_desc">Additional Description</string>
+
+    <string name="carpet_area_per">Carpet Area %</string>
+    <string name="loading_factor">Loading Factor</string>
+    <string name="selected_area">Selected Area</string>
+
+    <string name="error_gov_area">Enter the Government Area</string>
+    <string name="error_gov_rate">Enter the DLC Rate</string>
+    <string name="loading_photo">Loading Photo...Please wait</string>
+    <string name="save_popup">You have modified some data, do you want to save?</string>
+    <string name="number_of_building">Number of building</string>
+    <string name="type_of_compound">Type Of Compound</string>
+    <string name="pros_area">Pros Area</string>
+
+    <!--28-Dec-2018 changes-->
+    <string name="terrace_a">Terrace(A)</string>
+    <string name="balcony_a">Balcony(A)</string>
+    <string name="otla_a">Otla(A)</string>
+    <string name="mezzanine_a">Mezzanine(A)</string>
+    <string name="otla">Otla</string>
+    <string name="mezzanine">Mezzanine</string>
+    <string name="copyright">Copyright</string>
+    <string name="copyright1">All rights reserved</string>
+    <string name="version_name">Version:</string>
+    <string name="release_date">Release Date:</string>
+    <!-- for version date and version number -->
+    <string name="version_name1">3.1.8</string>
+    <string name="release_date1">03-Jun-19</string>
+    <string name="versionname_date">Version 3.1.8           Date 03-Jun-19</string>
+    <string name="create_case">CREATE CASE</string>
+    <string name="go_offline">GO OFFLINE</string>
+    <string name="about">ABOUT</string>
+    <string name="applicant_name">Applicant Name</string>
+    <string name="create">CREATE</string>
+    <string name="create_cases">Create Case</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="case_admin">Case Admin</string>
+    <string name="report_maker">Report Maker</string>
+    <string name="case_transfer">Case Transfer</string>
+    <string name="field_staff">Field Staff</string>
+    <string name="transfer">TRANSFER</string>
+    <string name="loc_updated">Location updated at</string>
+
+
+    <array name="salution">
+        <item>Salution</item>
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Ms.</item>
+        <item>M/s.</item>
+        <item>Dr. Mr.</item>
+        <item>Dr. Mrs.</item>
+        <item>Dr. Ms.</item>
+        <item>Prof. Mr.</item>
+        <item>Prof. Mrs.</item>
+        <item>Prof. Ms.</item>
+        <item>Rev. Mr.</item>
+        <item>Rev. Mrs.</item>
+        <item>Rev. Ms.</item>
+    </array>
+    <string name="unknown_location">Unknown location</string>
+    <plurals name="num_locations_reported">
+        <item quantity="zero">No location updated</item>
+        <item quantity="one">One location updated</item>
+        <item quantity="other">%d locations updated</item>
+    </plurals>
+
+    <string name="document_alert">Please install any document viewer application to view your document</string>
+
+    <string name="no_result">No Result found!</string>
+
+    <string name="compare_property_rate">
+        <u>Compare Property Rates</u>.
+    </string>
+    <string name="something_wrong">Something went wrong!</string>
+
+    <array name="compare">
+        <item>Select</item>
+        <item>All</item>
+        <item>Same as current</item>
+    </array>
+
+    <array name="km">
+        <item>Select</item>
+        <item>0.5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+    </array>
+
+
+</resources>

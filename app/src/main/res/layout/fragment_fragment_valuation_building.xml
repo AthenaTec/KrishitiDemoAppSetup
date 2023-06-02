@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_5sdp"
+    tools:ignore="Overdraw">
+
+    <TextView
+        android:id="@+id/textview_landvaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/height_3"
+        android:layout_marginTop="@dimen/height_3"
+        android:text="@string/landvaluation"
+        android:textColor="@color/font_heading"
+        android:textSize="@dimen/font_samll"
+        android:textStyle="normal"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvCompareRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/compare_property_rate"
+            android:textColor="@color/blue_link"
+            android:textSize="@dimen/_8sdp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_2"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        tools:ignore="DisableBaselineAlignment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/height_10"
+            app:hintTextAppearance="@style/TextInputLayout_hint"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <EditText
+                android:id="@+id/editText_guideline_rate"
+                style="@style/StyledTilEditText"
+                android:hint="@string/guideline_rate"
+                android:inputType="number"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_15"
+            android:layout_marginRight="@dimen/height_15"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_grey">
+
+            <TextView
+                android:id="@+id/textview_unit_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_3"
+                android:gravity="left"
+                android:text="@string/unit"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <Spinner
+                android:id="@+id/spinner_ft_meter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <ImageView
+                style="@style/StyledImagedown_large"
+                android:layout_marginTop="@dimen/height_6"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_10"
+            android:layout_weight="1"
+            tools:ignore="RtlHardcoded">
+
+            <EditText
+                android:id="@+id/editText_guideline_value"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/guideline_value" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/id_radiogroup_considerforvaluation_land"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="UselessParent">
+
+            <RadioButton
+                android:id="@+id/id_radio_considerforvaluation_permissiblearea_land"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/documentarea" />
+
+            <RadioButton
+                android:id="@+id/id_radio_considerforvaluation_actualarea_land"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_15"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/considerforvaluation_actual"
+                tools:ignore="RtlHardcoded" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_permissiblearea"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/height_2"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        tools:ignore="DisableBaselineAlignment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <EditText
+                android:id="@+id/editText_permissiblearea"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/asperdocumentarea" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/height_5"
+            android:paddingRight="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint">
+
+            <EditText
+                android:id="@+id/editText_unit_permissiblearea"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/unit"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText_rate_permissiblearea"
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/rate"
+                android:inputType="number"
+                android:maxLength="10" />
+
+            <TextView
+                android:id="@+id/tvRatePopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_error"
+                android:textSize="@dimen/_7sdp"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+        <!--  <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:paddingLeft="@dimen/height_5"
+              android:paddingRight="@dimen/height_5"
+              app:hintTextAppearance="@style/TextInputLayout_hint">
+
+              <EditText
+                  android:id="@+id/editText_rate_permissiblearea"
+                  style="@style/StyledTilEditText"
+                  android:hint="@string/rate"
+                  android:inputType="number"
+                  android:maxLength="10" />
+          </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <EditText
+                android:id="@+id/editText_total_permissiblearea"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/total"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_actualarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_2"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4"
+        tools:ignore="DisableBaselineAlignment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <EditText
+                android:id="@+id/editText_actualarea"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/actualarea"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/height_5"
+            android:paddingRight="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint">
+
+            <EditText
+                android:id="@+id/editText_unit_actualarea"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/unit"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/height_5"
+            android:paddingRight="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint">
+
+            <EditText
+                android:id="@+id/editText_rate_actualarea"
+                style="@style/StyledTilEditText"
+                android:hint="@string/rate"
+                android:inputType="number"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/height_5"
+            app:hintTextAppearance="@style/TextInputLayout_hint"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <EditText
+                android:id="@+id/editText_total_actualarea"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/total"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/height_10"
+        android:layout_marginBottom="@dimen/height_10"
+        android:background="@color/line"></View>
+
+    <TextView
+        android:id="@+id/textview_constructionvaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/height_3"
+        android:text="@string/constructionvaluation"
+        android:textColor="@color/font_heading"
+        android:textSize="@dimen/font_samll"
+        android:textStyle="normal"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_2"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        tools:ignore="DisableBaselineAlignment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/height_10"
+            app:hintTextAppearance="@style/TextInputLayout_hint"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <EditText
+                android:id="@+id/editText_construction_rate"
+                style="@style/StyledTilEditText"
+                android:hint="@string/construction_rate"
+                android:inputType="number"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_15"
+            android:layout_marginRight="@dimen/height_15"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_grey">
+
+            <TextView
+                android:id="@+id/textview_unit_construction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_3"
+                android:gravity="left"
+                android:text="@string/unit"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <Spinner
+                android:id="@+id/spinner_ft_meter_construction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <ImageView
+                style="@style/StyledImagedown_large"
+                android:layout_marginTop="@dimen/height_6"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_10"
+            android:layout_weight="1"
+            tools:ignore="RtlHardcoded">
+
+            <EditText
+                android:id="@+id/editText_construction_value"
+                style="@style/StyledTilEditText"
+                android:enabled="false"
+                android:hint="@string/construction_value"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/id_radiogroup_considerforvaluation_construction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="UselessParent">
+
+            <RadioButton
+                android:id="@+id/id_radio_considerforvaluation_permissiblearea_construction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/considerforvaluation_permissible" />
+
+            <RadioButton
+                android:id="@+id/id_radio_considerforvaluation_actualarea_construction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_15"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/considerforvaluation_actual"
+                tools:ignore="RtlHardcoded" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_1"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginRight="@dimen/height_1"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textview_floor_head"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:gravity="left"
+                android:paddingRight="@dimen/height_2"
+                android:text="@string/floor"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/textview_permissiblearea_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:gravity="left"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_0"
+                android:text="@string/permissiblearea"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textview_rate_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_4"
+                android:layout_weight="1.2"
+                android:gravity="left"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text="@string/rate_sqft"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textview_value_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_8"
+                android:layout_weight="1.3"
+                android:gravity="left"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text="@string/value"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textview_dep_per"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text="@string/dep_per"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textview_depvalue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_8"
+                android:layout_weight="1.2"
+                android:gravity="left"
+                android:paddingLeft="@dimen/height_12"
+                android:text="@string/depvalue"
+                android:textColor="@color/font_text_minor_heading"
+                android:textSize="@dimen/miniut_small"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        </LinearLayout>
+        <!-- Permissible area -->
+        <LinearLayout
+            android:id="@+id/linear_permissiblearea_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_1"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginRight="@dimen/height_1"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textview_permissiblearea_floor"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:inputType="text"
+                android:paddingRight="@dimen/height_2"
+                android:text="Floor 1"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+            <TextView
+                android:id="@+id/textview_permissiblearea_unit"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text="120 sq.ft"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="HardcodedText,TextViewEdits" />
+
+
+            <EditText
+                android:id="@+id/edittext_permissiblearea_rate"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_4"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor,RtlHardcoded" />
+
+
+            <TextView
+                android:id="@+id/textview_permissiblearea_value"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/height_8"
+                android:layout_weight="1.0"
+                android:gravity="left"
+                android:inputType="text"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text=""
+                android:textSize="@dimen/font_samll"
+                tools:ignore="RtlHardcoded,TextViewEdits" />
+
+
+            <EditText
+                android:id="@+id/edittext_permissiblearea_dep_per"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:paddingLeft="@dimen/height_4"
+                android:paddingRight="@dimen/height_2"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textview_permissiblearea_dep_value"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/height_8"
+                android:layout_weight="1.2"
+                android:inputType="text"
+                android:paddingLeft="@dimen/height_12"
+                android:text=""
+                android:textSize="@dimen/font_samll"
+                tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_permissiblearea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+
+
+        <!-- Actual area -->
+        <LinearLayout
+            android:id="@+id/linear_actual_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_1"
+            android:layout_marginTop="@dimen/height_5"
+            android:layout_marginRight="@dimen/height_1"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textview_actual_floor"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:inputType="text"
+                android:paddingRight="@dimen/height_2"
+                android:text="Floor 3"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+            <TextView
+                android:id="@+id/textview_actual_unit"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text="250 sq.ft"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="HardcodedText,TextViewEdits" />
+
+
+            <EditText
+                android:id="@+id/edittext_actual_rate"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height_4"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor,RtlHardcoded" />
+
+
+            <TextView
+                android:id="@+id/textview_actual_value"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/height_8"
+                android:layout_weight="1.0"
+                android:inputType="numberDecimal"
+                android:paddingLeft="@dimen/height_2"
+                android:paddingRight="@dimen/height_2"
+                android:text=""
+                android:textSize="@dimen/font_samll"
+                tools:ignore="RtlHardcoded,TextViewEdits" />
+
+
+            <EditText
+                android:id="@+id/edittext_actual_dep_per"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingLeft="@dimen/height_4"
+                android:paddingRight="@dimen/height_2"
+                android:textSize="@dimen/font_samll"
+                tools:ignore="LabelFor,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textview_actual_dep_value"
+                style="@style/StyledTilEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/height_8"
+                android:layout_weight="1.2"
+                android:inputType="text"
+                android:paddingLeft="@dimen/height_12"
+                android:text=""
+                android:textSize="@dimen/font_samll"
+                tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_actualarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/height_15"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        tools:ignore="DisableBaselineAlignment">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="3.8"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/height_6"
+            android:paddingRight="@dimen/height_20"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/height_2"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/textview_totalconstructionvalue"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="right"
+                    android:inputType="text"
+                    android:paddingRight="@dimen/height_10"
+                    android:text="@string/totalconstructionvalue"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="NestedWeights,RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+                <TextView
+                    android:id="@+id/textview_totalconstructionvalue_result"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="right"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/height_10"
+                    android:paddingRight="@dimen/height_2"
+                    android:text=""
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="RtlHardcoded,TextViewEdits" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/height_2"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textview_totalpropertyvalue"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="right"
+                    android:inputType="text"
+                    android:paddingRight="@dimen/height_10"
+                    android:text="@string/totalpropertyvalue"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+                <TextView
+                    android:id="@+id/textview_totalpropertyvalue_result"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="right"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/height_10"
+                    android:paddingRight="@dimen/height_2"
+                    android:text=""
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="RtlHardcoded,TextViewEdits,TooManyViews" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/height_2"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+
+                <EditText
+                    android:id="@+id/editText_aspercompletion"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="right"
+                    android:hint="@string/aspercompletion"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/textview_aspercompletion_result"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="right"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/height_10"
+                    android:paddingRight="@dimen/height_2"
+                    android:text=""
+                    android:textSize="@dimen/font_samll"
+                    tools:ignore="RtlHardcoded,TextViewEdits" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/height_2"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textview_insurancevaluepe"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|right"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:paddingRight="@dimen/height_10"
+                    android:singleLine="false"
+                    android:text="@string/insurancevaluepe"
+                    android:textSize="@dimen/_10sdp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+
+                <TextView
+                    android:id="@+id/textview_insurancevaluepe_result"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/height_10"
+                    android:paddingRight="@dimen/height_2"
+                    android:text=""
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="RtlHardcoded,TextViewEdits" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/height_2"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textview_proposedvaluation"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.0"
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:inputType="text"
+                    android:paddingRight="@dimen/height_10"
+                    android:text="@string/proposedvaluation"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextViewEdits" />
+
+                <EditText
+                    android:id="@+id/edittext_proposedvaluation_result"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_weight="1.0"
+                    android:layout_gravity="right"
+                    android:hint="@string/rate"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/height_5"
+                android:layout_weight="4.1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="NestedWeights,RtlHardcoded">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/height_2"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bottom_grey"
+                    tools:ignore="NestedWeights,RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/textview_realizable_per"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:gravity="left"
+                        android:text="@string/realizable_per"
+                        android:textColor="@color/font_text_minor_heading"
+                        android:textSize="@dimen/_7sdp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <!--<Spinner
+                        android:id="@+id/spinner_realizable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:spinnerMode="dialog" />-->
+
+                    <TextView
+                        android:id="@+id/spinner_realizable"
+                        style="@style/StyledTilText_multicheck"
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/select"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <ImageView
+                        style="@style/StyledImagedown_large"
+                        android:layout_marginTop="@dimen/height_6"
+                        tools:ignore="ContentDescription" />
+
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/editText_realizable_custom"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/height_2"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom"
+                    android:hint="@string/custom"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="invisible"
+                    tools:ignore="RtlHardcoded" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/height_5"
+                android:layout_weight="4.1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:ignore="RtlHardcoded">
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/height_2"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bottom_grey"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/textview_distress_per"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:gravity="left"
+                        android:text="@string/distress_per"
+                        android:textColor="@color/font_text_minor_heading"
+                        android:textSize="@dimen/_7sdp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <!--<Spinner
+                        android:id="@+id/spinner_distress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:spinnerMode="dialog" />-->
+
+                    <TextView
+                        android:id="@+id/spinner_distress"
+                        style="@style/StyledTilText_multicheck"
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/select"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <ImageView
+                        style="@style/StyledImagedown_large"
+                        android:layout_marginTop="@dimen/height_6"
+                        tools:ignore="ContentDescription" />
+
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/editText_distress_custom"
+                    style="@style/StyledTilEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/height_2"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom"
+                    android:hint="@string/custom"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="invisible"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/height_5"
+                android:layout_weight="4.1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:ignore="DisableBaselineAlignment,RtlHardcoded">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/height_2"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bottom_grey"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/textview_carpet_per"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:gravity="left"
+                        android:text="@string/carpet_per"
+                        android:textColor="@color/font_text_minor_heading"
+                        android:textSize="@dimen/_7sdp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <!--  <Spinner
+                          android:id="@+id/spinner_carpet"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:background="@null"
+                          android:spinnerMode="dialog" />-->
+                    <TextView
+                        android:id="@+id/spinner_carpet"
+                        style="@style/StyledTilText_multicheck"
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text="Select"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <ImageView
+                        style="@style/StyledImagedown_large"
+                        android:layout_marginTop="@dimen/height_6"
+                        tools:ignore="ContentDescription" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/height_2"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bottom_grey"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/textview_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/height_3"
+                        android:gravity="left"
+                        android:text="@string/select"
+                        android:textColor="@color/font_text_minor_heading"
+                        android:textSize="@dimen/_7sdp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <!-- <Spinner
+                         android:id="@+id/spinner_carpet_type"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:background="@null"
+                         android:spinnerMode="dialog" />-->
+                    <TextView
+                        android:id="@+id/spinner_carpet_type"
+                        style="@style/StyledTilText_multicheck"
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text="Select"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <ImageView
+                        style="@style/StyledImagedown_large"
+                        android:layout_marginTop="@dimen/height_6"
+                        tools:ignore="ContentDescription" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/height_3"
+                android:layout_weight="4.1"
+                app:hintTextAppearance="@style/TextInputLayout_hint"
+                tools:ignore="RtlHardcoded">
+
+                <EditText
+                    android:id="@+id/editText_remarks"
+                    style="@style/StyledTilEditText"
+                    android:gravity="bottom"
+                    android:hint="@string/remarks"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:lines="2"
+                    android:maxLength="100" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
