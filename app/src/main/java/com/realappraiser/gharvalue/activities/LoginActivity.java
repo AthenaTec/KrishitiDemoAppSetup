@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -24,6 +26,8 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -31,6 +35,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -86,19 +91,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextView forgotpassword;
     @BindView(R.id.seturl)
     TextView seturl;
-    @BindView(R.id.login)
-    TextView login;
+    /*@BindView(R.id.login)
+    TextView login;*/
     @BindView(R.id.txt)
     TextView txt;
     @BindView(R.id.email_input)
     TextView email_input;
     @BindView(R.id.pwd_input)
-    TextView pwd_input;
+    EditText pwd_input;
     @BindView(R.id.loginBtn)
-    Button loginBtn;
+    TextView loginBtn;
+
+    @BindView(R.id.password_hide)
+    ImageView passwordHide;
+
+    private boolean isPasswordShow = false;
 
     private EditText addkeys;
     private Dialog dialog;
+
+    private AlertDialog urlAlertDialog;
     private String msg = "", info = "";
     private String lemail = "", lpwd = "";
     private ArrayList<DataModel> loginModel;
@@ -143,6 +155,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         general = new General(LoginActivity.this);
         initValues();
 //        settingAndFireRemote();
+        passwordHide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onShowPassword();
+            }
+        });
+    }
+
+    private void onShowPassword() {
+
+        if (isPasswordShow) {
+            pwd_input.setTransformationMethod(PasswordTransformationMethod
+                    .getInstance());
+            passwordHide.setImageResource(R.drawable.ic_password_hide);
+            pwd_input.setSelection(pwd_input.getText
+                    ().length());
+            isPasswordShow = false;
+        } else {
+            pwd_input.setTransformationMethod
+                    (HideReturnsTransformationMethod.getInstance());
+            passwordHide.setImageResource(R.drawable.ic_password_show);
+            pwd_input.setSelection(pwd_input.getText
+                    ().length());
+            isPasswordShow = true;
+        }
     }
 
 
@@ -245,7 +282,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         locationTrackerApi = new LocationTrackerApi(this);
         forgotpassword.setTypeface(general.regulartypeface());
         seturl.setTypeface(general.regulartypeface());
-        login.setTypeface(general.mediumtypeface());
+        //login.setTypeface(general.mediumtypeface());
         txt.setTypeface(general.regulartypeface());
         loginBtn.setOnClickListener(this);
         seturl.setOnClickListener(this);
@@ -317,17 +354,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * first view for server authentication
      * *******/
     private void Serverurldialog() {
-        dialog = new Dialog(this);
+        /*dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
-        dialog.setContentView(R.layout.loginpopup);
+        dialog.setContentView(R.layout.loginpopup);*/
+
+        View view  = getLayoutInflater().inflate(R.layout.loginpopup,null);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setView(view);
+        urlAlertDialog = builder.create();
+        urlAlertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        urlAlertDialog.show();
 
 
-        TextView popuptitle = (TextView) dialog.findViewById(R.id.title);
-        addkeys = (EditText) dialog.findViewById(R.id.layout_url);
-        LinearLayout Cancel = (LinearLayout) dialog.findViewById(R.id.close);
-        Button submit = (Button) dialog.findViewById(R.id.button);
+        TextView popuptitle = (TextView) view.findViewById(R.id.title);
+        addkeys = (EditText) view.findViewById(R.id.layout_url);
+       // LinearLayout Cancel = (LinearLayout) dialog.findViewById(R.id.close);
+        ImageView Cancel = (ImageView) view.findViewById(R.id.close);
+        Button submit = (Button) view.findViewById(R.id.button);
         submit.setTypeface(general.mediumtypeface());
         popuptitle.setTypeface(general.mediumtypeface());
 
@@ -340,7 +387,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View v) {
                 hideSoftKeyboard(addkeys);
-                dialog.dismiss();
+                urlAlertDialog.dismiss();
             }
         });
 
@@ -352,13 +399,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        dialog.show();
+        urlAlertDialog.show();
         addkeys.requestFocus();
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+      /*  InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         Window windo = dialog.getWindow();
         windo.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-    }
+   */ }
 
     private void hideSoftKeyboard(View addkeys) {
         if (addkeys != null) {
@@ -502,7 +549,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 // general.CustomToast(msg);
                 String API_BASE_URL = addkeys.getText().toString().trim();
                 SettingsUtils.getInstance().putValue(SettingsUtils.API_BASE_URL, API_BASE_URL);
-                dialog.dismiss();
+                urlAlertDialog.dismiss();
             } else if (result.equals("2")) {
                 general.CustomToast(msg);
             } else if (result.equals("0")) {

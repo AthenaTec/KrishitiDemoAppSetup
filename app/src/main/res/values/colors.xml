@@ -42,6 +42,10 @@
     <color name="colorNumBtnBackground">#3C4043</color>
     <color name="colorNumBtnText">#fff</color>
 
+    <color name="app_color">#D75A4A</color>
+    <color name="app_transparent_color">#26D75A4A</color>
+    <color name="app_transparent_case_bg_color">#99D75A4A</color>
+
    <!-- <color name="colorFuncBtnBackground">#cccccc</color>
     <color name="colorFuncBtnText">#00796b</color>-->
     <!--<color name="colorNumBtnBackground">#dddddd 666</color>

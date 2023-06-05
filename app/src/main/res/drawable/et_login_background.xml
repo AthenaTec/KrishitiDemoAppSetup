@@ -1,0 +1,52 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+    <shape  android:shape="rectangle"
+        >
+
+        <stroke
+            android:width="@dimen/_5sdp"
+            android:color="#E9EAEF"
+            />
+        <corners
+            android:radius="@dimen/_50sdp"/>
+        <padding
+            android:bottom="@dimen/_4sdp"
+            android:left="@dimen/_4sdp"
+            android:right="@dimen/_4sdp"
+            android:top="@dimen/_4sdp"/>
+
+    </shape>
+    </item>
+
+    <item android:drawable="@drawable/et_login_bg"/>
+
+
+    <!--<item>
+        <rotate
+            android:fromDegrees="55"
+            android:pivotX="-65%"
+            android:pivotY="100%"
+            android:toDegrees="0">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorAccent" />
+
+            </shape>
+        </rotate>
+    </item>
+
+    <item>
+        <rotate
+            android:fromDegrees="15"
+            android:pivotX="0%"
+            android:pivotY="290%"
+            android:toDegrees="0">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorPrimary" />
+
+            </shape>
+        </rotate>
+    </item>
+-->
+</layer-list>

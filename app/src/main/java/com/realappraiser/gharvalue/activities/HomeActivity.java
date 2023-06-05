@@ -1586,7 +1586,7 @@ public class HomeActivity extends AppCompatActivity implements
         switch (item.getItemId()) {
             case R.id.logout:
                 if (Connectivity.isConnected(this)) {
-                    general.LogoutDialog();
+                    general.LogoutDialog(this);
                 } else {
                     Connectivity.showNoConnectionDialog(this);
                 }

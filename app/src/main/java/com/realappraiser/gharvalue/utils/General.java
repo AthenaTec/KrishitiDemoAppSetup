@@ -8,7 +8,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -29,8 +31,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -486,12 +490,28 @@ public class General implements OnPageChangeListener, OnLoadCompleteListener,
     }
 
 
-    public void LogoutDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(mContext, R.style.AlertDialogCustom));
-        builder.setMessage("Are you sure you want to Logout?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+    public void LogoutDialog(Activity activity) {
+        View view  = activity.getLayoutInflater().inflate(R.layout.save_pop_up,null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity,R.style.CustomDialog);
+        builder.setView(view);
+
+        AlertDialog savePopup = builder.create();
+        savePopup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        TextView title = view.findViewById(R.id.title);
+        title.setText("Are you sure you want to Logout?");
+        Button btnSubmit = view.findViewById(R.id.btn_save);
+        btnSubmit.setText("YES");
+        Button btnCancel = view.findViewById(R.id.btn_no);
+        btnCancel.setText("NO");
+        savePopup.setCancelable(false);
+        savePopup.setCanceledOnTouchOutside(false);
+        savePopup.show();
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
                         Singleton.getInstance().longitude = 0.0;
                         Singleton.getInstance().latitude = 0.0;
                         Singleton.getInstance().aCase = new Case();
@@ -585,14 +605,14 @@ public class General implements OnPageChangeListener, OnLoadCompleteListener,
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(intent);
                     }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
                 });
-        AlertDialog alert = builder.create();
-        alert.show();
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                savePopup.cancel();
+            }
+        });
     }
 
     public boolean checkPermissions() {

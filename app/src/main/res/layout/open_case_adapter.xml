@@ -6,15 +6,21 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.loopeer.shadow.ShadowView
-        android:id="@+id/shadow_view"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="4dp"
-        android:foreground="?attr/selectableItemBackground"
-        app:shadowMargin="4dp"
-        app:shadowRadius="14dp"
-        tools:ignore="UnusedAttribute">
+        app:cardElevation="@dimen/_5sdp"
+        app:cardMaxElevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="false"
+
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_4sdp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,19 +32,78 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="3dp"
                 android:orientation="horizontal"
-                android:padding="9dp">
-
-                <TextView
-                    android:id="@+id/case_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@color/black" />
-
+                android:padding="9dp"
+                android:weightSum="1"
+                >
 
                 <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.45"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:background="@drawable/case_bg"
+                        android:id="@+id/case_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:padding="@dimen/_8sdp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_parent_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/case_assigned_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/pipe_symbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="@string/pipesymbol" />
+
+                        <TextView
+                            android:id="@+id/case_assigned_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
@@ -68,7 +133,7 @@
                         android:textSize="12sp" />
 
 
-                </LinearLayout>
+                </LinearLayout>-->
             </LinearLayout>
 
             <View
@@ -80,7 +145,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="3dp"
-                android:layout_marginBottom="5dp"
                 android:orientation="vertical"
                 android:paddingLeft="9dp"
                 android:paddingTop="5dp"
@@ -90,35 +154,39 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="1dp"
                     android:orientation="horizontal">
 
                     <RelativeLayout
                         android:id="@+id/relative_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/height_3"
-                        android:gravity="left"
                         android:orientation="horizontal"
                         tools:ignore="RtlHardcoded,UselessParent">
 
-                        <ImageView
-                            android:id="@+id/case_person_image"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/person"
-                            tools:ignore="ContentDescription" />
+                        <RelativeLayout
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/grey_circle"
+                            android:id="@+id/case_parent"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:id="@+id/case_person_image"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/person"
+                                tools:ignore="ContentDescription" />
+                        </RelativeLayout>
 
                         <TextView
                             android:id="@+id/case_person_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="5dp"
-                            android:layout_toRightOf="@+id/case_person_image"
-                            android:gravity="center_vertical"
-                            android:paddingRight="@dimen/height_8"
+                            android:layout_toRightOf="@+id/case_parent"
+                            android:paddingTop="@dimen/height_8"
                             android:singleLine="true"
                             android:text="-"
                             android:textColor="@color/Activite"
@@ -128,81 +196,91 @@
 
                 </LinearLayout>
 
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:visibility="gone"
+                     >
+
+                     <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:orientation="horizontal"
+                         tools:ignore="RtlHardcoded,UselessParent">
+
+
+                     <RelativeLayout
+                         android:layout_width="@dimen/_30sdp"
+                         android:layout_height="@dimen/_30sdp"
+                         android:background="@drawable/grey_circle"
+                         android:id="@+id/case_book_image_parent"
+                         >
+
+                         <ImageView
+                             android:id="@+id/case_book_image"
+                             android:layout_width="@dimen/_14sdp"
+                             android:layout_height="@dimen/_14sdp"
+                             android:scaleType="fitXY"
+                             app:srcCompat="@drawable/ic_book"
+                             android:layout_marginEnd="@dimen/_5sdp"
+                             android:layout_marginRight="@dimen/_5sdp"
+                             android:layout_marginLeft="@dimen/_4sdp"
+                             android:layout_marginStart="@dimen/_4sdp"
+                             android:layout_marginTop="@dimen/_4sdp"
+                             tools:ignore="ContentDescription,RtlHardcoded" />
+                     </RelativeLayout>
+                         <TextView
+                             android:id="@+id/bankNo"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_toRightOf="@+id/case_book_image_parent"
+                             android:singleLine="true"
+                             android:text="-"
+                             android:layout_marginTop="@dimen/_7sdp"
+                             android:textColor="@color/Activite"
+                             tools:ignore="HardcodedText,RtlHardcoded" />
+                     </RelativeLayout>
+
+                 </LinearLayout>-->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/height_3"
-                        android:gravity="left"
-                        android:orientation="horizontal"
-                        tools:ignore="RtlHardcoded,UselessParent">
-
-                        <ImageView
-                            android:id="@+id/case_mobile_image"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_centerInParent="true"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/call"
-                            tools:ignore="ContentDescription,RtlHardcoded" />
-
-                        <TextView
-                            android:id="@+id/case_mobile"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="5dp"
-                            android:layout_toRightOf="@+id/case_mobile_image"
-                            android:gravity="center_vertical"
-                            android:singleLine="true"
-                            android:text="-"
-                            android:textColor="@color/Activite"
-                            tools:ignore="HardcodedText,RtlHardcoded" />
-                    </RelativeLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <RelativeLayout
                         android:id="@+id/relative_address"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/height_3"
                         android:gravity="left"
                         android:orientation="horizontal"
                         tools:ignore="RtlHardcoded,UselessParent">
 
-                        <ImageView
-                            android:id="@+id/case_location_image"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_centerInParent="true"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/ic_placeholder"
-                            tools:ignore="ContentDescription,RtlHardcoded" />
-
+                        <RelativeLayout
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/grey_circle"
+                            android:id="@+id/case_location_image_parent"
+                            >
+                            <ImageView
+                                android:id="@+id/case_location_image"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:scaleType="fitXY"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:srcCompat="@drawable/ic_placeholder"
+                                tools:ignore="ContentDescription,RtlHardcoded" />
+                        </RelativeLayout>
                         <TextView
                             android:id="@+id/case_addressloc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="5dp"
-                            android:layout_toRightOf="@+id/case_location_image"
-                            android:gravity="center_vertical"
+                            android:layout_toRightOf="@+id/case_location_image_parent"
                             android:singleLine="true"
                             android:text="-"
+                            android:layout_marginTop="@dimen/_7sdp"
                             android:textColor="@color/Activite"
                             tools:ignore="HardcodedText,RtlHardcoded" />
                     </RelativeLayout>
@@ -212,37 +290,85 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="left"
                         android:orientation="horizontal"
                         tools:ignore="RtlHardcoded,UselessParent">
 
-                        <ImageView
-                            android:id="@+id/case_bank_img"
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_centerInParent="true"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/ic_bank"
-                            tools:ignore="ContentDescription,RtlHardcoded" />
+                        <RelativeLayout
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/grey_circle"
+                            android:id="@+id/case_mobile_image_parent"
+                            >
+                            <ImageView
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:id="@+id/case_mobile_image"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/call"
+                                tools:ignore="ContentDescription,RtlHardcoded" />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/case_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:layout_toRightOf="@+id/case_mobile_image_parent"
+                            android:singleLine="true"
+                            android:text="-"
+                            android:textColor="@color/Activite"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </RelativeLayout>
 
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded,UselessParent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+                        <RelativeLayout
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/grey_circle"
+                            android:id="@+id/case_bank_img_parent"
+                            >
+                            <ImageView
+                                android:id="@+id/case_bank_img"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:scaleType="fitXY"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:srcCompat="@drawable/ic_bank"
+                                tools:ignore="ContentDescription,RtlHardcoded" />
+                        </RelativeLayout>
                         <TextView
                             android:id="@+id/case_bank"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="5dp"
-                            android:layout_toRightOf="@+id/case_bank_img"
-                            android:gravity="center_vertical"
+                            android:layout_toRightOf="@+id/case_bank_img_parent"
                             android:singleLine="true"
                             android:text="-"
+                            android:layout_marginTop="@dimen/_7sdp"
                             android:textColor="@color/Activite"
                             tools:ignore="HardcodedText,RtlHardcoded" />
                     </RelativeLayout>
@@ -254,7 +380,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     tools:ignore="InconsistentLayout">
 
@@ -264,17 +389,22 @@
                         android:gravity="left"
                         android:orientation="horizontal"
                         tools:ignore="RtlHardcoded,UselessParent">
-
-                        <ImageView
-                            android:id="@+id/case_property_img"
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_centerInParent="true"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/property_val_dashboard"
-                            tools:ignore="ContentDescription,RtlHardcoded" />
-
+                        <RelativeLayout
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/grey_circle"
+                            android:id="@+id/case_property_img_parent"
+                            >
+                            <ImageView
+                                android:id="@+id/case_property_img"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/property_val_dashboard"
+                                tools:ignore="ContentDescription,RtlHardcoded" />
+                        </RelativeLayout>
                         <!--<TextView
                             android:id="@+id/textview_property_heading"
                             android:layout_width="wrap_content"
@@ -289,9 +419,8 @@
                             android:id="@+id/textview_property_heading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="5dp"
-                            android:layout_toRightOf="@+id/case_property_img"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:layout_toRightOf="@+id/case_property_img_parent"
                             android:singleLine="true"
                             android:text="@string/property_type_head"
                             android:textColor="@color/Activite"
@@ -301,7 +430,7 @@
                             android:id="@+id/textview_property_type_heading"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_7sdp"
                             android:layout_marginLeft="@dimen/height_6"
                             android:layout_toRightOf="@+id/textview_property_heading"
                             android:text="-"
@@ -314,14 +443,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/height_0"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/property_exits_lay"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/height_0"
                         android:layout_marginBottom="@dimen/height_3"
                         android:orientation="horizontal">
 
@@ -341,7 +468,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:gravity="center_vertical"
-                            android:theme="@style/SwitchTheme" />
+                            android:theme="@style/SwitchTheme"
+                            tools:ignore="TouchTargetSizeCheck" />
                     </LinearLayout>
 
                     <!--Property Type Display Started-->
@@ -398,23 +526,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="@dimen/height_3"
+                        android:layout_marginBottom="@dimen/height_1"
                         android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_4sdp"
                         tools:ignore="ObsoleteLayoutParam">
 
                         <LinearLayout
                             android:id="@+id/property_type_update_lay"
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:background="@drawable/round">
 
                             <ImageView
                                 android:id="@+id/case_property_edit"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:layout_marginStart="6dp"
-                                android:scaleType="fitXY"
+                                android:padding="8dp"
                                 app:srcCompat="@drawable/property_val_dashboard"
                                 tools:ignore="ContentDescription" />
 
@@ -422,106 +550,186 @@
 
                         <LinearLayout
                             android:id="@+id/document_read_lay"
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_marginStart="10dp"
                             android:background="@drawable/round"
                             android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/case_document"
-                                android:layout_width="7dp"
-                                android:layout_height="13dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:scaleType="fitXY"
+                                android:padding="8dp"
                                 app:srcCompat="@drawable/document_dashb"
                                 tools:ignore="ContentDescription" />
                         </LinearLayout>
 
                         <LinearLayout
-                            android:visibility="gone"
                             android:id="@+id/transfer_lay"
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_marginStart="10dp"
                             android:background="@drawable/round"
                             android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/imgTransfer"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:scaleType="fitXY"
+                                android:padding="8dp"
                                 app:srcCompat="@drawable/ic_transfer"
                                 tools:ignore="ContentDescription" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:orientation="horizontal"
-                            tools:ignore="RtlHardcoded,UselessParent">
+                            android:layout_marginTop="2dp"
+                            android:orientation="horizontal">
 
                             <LinearLayout
-                                android:id="@+id/rejectLay"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/strokeshape_bg"
-                                android:orientation="vertical"
-                                android:paddingLeft="15dp"
-                                android:paddingTop="5dp"
-                                android:paddingRight="15dp"
-                                android:paddingBottom="5dp">
+                                android:gravity="left"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                >
 
-                                <TextView
-                                    android:id="@+id/reject"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/reject"
-                                    android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="13sp"
-                                    tools:ignore="TooDeepLayout" />
+
+
                             </LinearLayout>
 
                             <LinearLayout
-                                android:id="@+id/acceptLay"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="7dp"
-                                android:background="@drawable/buttonshape"
-                                android:orientation="vertical"
-                                android:paddingLeft="15dp"
-                                android:paddingTop="5dp"
-                                android:paddingRight="15dp"
-                                android:paddingBottom="5dp">
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                tools:ignore="RtlHardcoded,UselessParent">
 
-                                <TextView
-                                    android:id="@+id/accept"
+                                <LinearLayout
+                                    android:id="@+id/rejectLay"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/accept"
-                                    android:textColor="@color/white"
-                                    android:textSize="13sp" />
+                                    android:background="@drawable/strokeshape_bg"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="15dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="15dp"
+                                    android:paddingBottom="5dp">
+
+                                    <TextView
+                                        android:id="@+id/reject"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/reject"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="13sp"
+                                        tools:ignore="TooDeepLayout" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/acceptLay"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="7dp"
+                                    android:background="@drawable/buttonshape"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="15dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="15dp"
+                                    android:paddingBottom="5dp">
+
+                                    <TextView
+                                        android:id="@+id/accept"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/accept"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
                             </LinearLayout>
+
                         </LinearLayout>
 
                     </LinearLayout>
+
+
+                    <!--  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="2dp"
+                          android:orientation="horizontal">
+
+                          <LinearLayout
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:gravity="left"
+                              android:layout_marginTop="@dimen/_2sdp"
+                              >
+
+
+
+                          </LinearLayout>
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:gravity="right"
+                              android:orientation="horizontal"
+                              tools:ignore="RtlHardcoded,UselessParent">
+
+                              <LinearLayout
+                                  android:id="@+id/rejectLay"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:background="@drawable/strokeshape_bg"
+                                  android:orientation="vertical"
+                                  android:paddingLeft="15dp"
+                                  android:paddingTop="5dp"
+                                  android:paddingRight="15dp"
+                                  android:paddingBottom="5dp">
+
+                                  <TextView
+                                      android:id="@+id/reject"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="@string/reject"
+                                      android:textColor="@color/colorPrimaryDark"
+                                      android:textSize="13sp"
+                                      tools:ignore="TooDeepLayout" />
+                              </LinearLayout>
+
+                              <LinearLayout
+                                  android:id="@+id/acceptLay"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginStart="7dp"
+                                  android:background="@drawable/buttonshape"
+                                  android:orientation="vertical"
+                                  android:paddingLeft="15dp"
+                                  android:paddingTop="5dp"
+                                  android:paddingRight="15dp"
+                                  android:paddingBottom="5dp">
+
+                                  <TextView
+                                      android:id="@+id/accept"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="@string/accept"
+                                      android:textColor="@color/white"
+                                      android:textSize="13sp" />
+                              </LinearLayout>
+                          </LinearLayout>
+                      </LinearLayout>-->
 
                 </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
-    </com.loopeer.shadow.ShadowView>
+
+
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

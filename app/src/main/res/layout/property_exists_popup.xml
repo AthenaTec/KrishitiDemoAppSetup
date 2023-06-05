@@ -84,7 +84,7 @@
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="NO"
-                android:textColor="@color/Black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="ButtonStyle,HardcodedText" />
 

@@ -5,131 +5,151 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/login_background"
+    android:background="@drawable/ra_login_bg"
     android:gravity="center"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="40dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/logo"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription"
+            android:layout_marginBottom="@dimen/_30sdp"
+            />
 
-    <TextView
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="LOGIN"
-        android:textColor="@color/Black"
-        android:textSize="20sp"
-        tools:ignore="HardcodedText" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:textColorHint="@color/Gray">
 
         <EditText
             android:id="@+id/email_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User Name"
+            android:hint="Enter email"
             android:inputType="textEmailAddress"
             android:textColor="@color/Black"
-            tools:ignore="HardcodedText" />
-    </com.google.android.material.textfield.TextInputLayout>
+            tools:ignore="HardcodedText"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/et_login_background"
+            android:drawableStart="@drawable/ic_mail_svg"
+            android:drawableLeft="@drawable/ic_mail_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:layout_marginTop="20dp"
+            />
+        <!-- <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/layout_password"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="30dp"
+             android:layout_marginStart="30dp"
+             android:layout_marginTop="10dp"
+             android:textColorHint="@color/Gray"
+             app:passwordToggleDrawable="@drawable/eye"
+             app:passwordToggleEnabled="true"
+             app:passwordToggleTint="@color/Activite">-->
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:textColorHint="@color/Gray"
-        app:passwordToggleDrawable="@drawable/eye"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/Activite">
 
-        <EditText
-            android:id="@+id/pwd_input"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="@color/Black"
-            tools:ignore="HardcodedText" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:background="@drawable/et_login_background"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+            <EditText
+                android:id="@+id/pwd_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter password"
+                android:inputType="textPassword"
+                android:textColor="@color/Black"
+                tools:ignore="HardcodedText"
+                android:drawableStart="@drawable/ic_password_svg"
+                android:drawableLeft="@drawable/ic_password_svg"
+                android:drawablePadding="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@null"
+                />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/password_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toStartOf="@id/pwd_input"
+                android:src="@drawable/ic_password_hide"
+                android:layout_marginStart="@dimen/_20sdp"
+                />
 
-        <TextView
-            android:id="@+id/forgotpassword"
-            android:layout_width="wrap_content"
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="2dp"
-            android:text="Forgot Password"
-            android:textColor="@color/Black"
-            android:textSize="14sp"
-            tools:ignore="HardcodedText,InefficientWeight" />
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/forgotpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Forgot Password"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,InefficientWeight" />
+        </LinearLayout>
         <TextView
             android:id="@+id/seturl"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Set Server URL"
-            android:padding="2dp"
             android:textColor="@color/Black"
-            android:textSize="14sp"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
+            android:textSize="15sp"
+            tools:ignore="HardcodedText"
+            android:gravity="right|end"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            />
 
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/buttonshape"
-        android:gravity="center"
-        android:paddingEnd="40dp"
-        android:paddingStart="40dp"
-        android:text="Login"
-        android:textColor="@color/White"
-        android:textSize="20sp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="Login"
+            android:textAllCaps="true"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"
+            android:padding="@dimen/_10sdp"
+            />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
         android:text="@string/realappraiser_brand"
         android:textColor="@color/Black"
-        android:textSize="14sp" />
-
-    </LinearLayout>
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_gravity="center"
+        />
 </LinearLayout>
