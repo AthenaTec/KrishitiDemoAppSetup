@@ -99,8 +99,9 @@
     <string name="same">Same</string>
     <string name="servey_persence">Survey in presence of</string>
     <string name="plotno">Plot No</string>
-    <string name="resident_usage">% Residential Usage in Property</string>
-    <string name="commercial_usage">% Residential Usage in Property</string>
+    <string name="resident_usage">% Residential Usage in Property*</string>
+    <string name="commercial_usage">% Commercial Usage in Property*</string>
+    <string name="installation_favour_of">Installation in favor of</string>
     <string name="select_localitycate" tools:ignore="UnusedResources">Select Locality Category</string>
     <string name="select_class" tools:ignore="UnusedResources">Select Class</string>
     <string name="select">Select</string>
@@ -137,6 +138,7 @@
     <string name="plot_demarcated">Plot demarcated at site</string>
     <string name="isproperty_demolish">Is Property in demolish list?</string>
     <string name="property_within_muni">Property with in Municipal Area</string>
+    <string name="property_technically">Is the Property Technically Acceptable</string>
     <string name="property_details">Property Details</string>
     <string name="is_compounded">Is Compounded?</string>
     <string name="land_measurement">Land Measurement:</string>
@@ -231,7 +233,7 @@
     <string name="colony_name">Colony Name</string>
     <string name="year_of_current_tenancy">Year of current tenancy</string>
     <string name="amenities">Amenities</string>
-    <string name="rentalincome">Rental Income</string>
+    <string name="rentalincome">Rental Information</string>
     <string name="nameoftenant">Name Of Tenant</string>
     <string name="wing_name">Wing Name</string>
     <string name="floor_height">Floor height</string>
@@ -261,7 +263,6 @@
     <string name="marketability">Marketability</string>
     <string name="passagecorridorschowklobby">Passage/Corridors/Chowk/Lobby</string>
     <string name="typeoflocality">Type of locality</string>
-    <string name="installation_favour_of">Installation in favor of</string>
     <string name="bathflooring">Bath Flooring</string>
     <string name="amenitiesquality">Amenities Quality</string>
     <string name="kitchentype">Kitchen Type</string>

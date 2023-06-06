@@ -405,6 +405,8 @@
                             android:id="@+id/layout_residential_usage"
                             android:layout_marginEnd="@dimen/_2sdp"
                             android:layout_marginRight="@dimen/_2sdp"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -454,6 +456,8 @@
                             android:id="@+id/layout_plotno"
                             android:layout_marginStart="@dimen/_2sdp"
                             android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -468,43 +472,82 @@
                                 android:maxLength="50" />
                         </com.google.android.material.textfield.TextInputLayout>
 
-
-                        <LinearLayout
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_installation_favour_of"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/height_5"
-                            android:layout_marginRight="@dimen/height_3"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            >
+                            android:textColorHint="@color/font_texthint">
 
-                            <TextView
-                                android:id="@+id/textview_condition_approad"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/height_3"
-                                android:gravity="left"
-                                android:text="@string/condition_approad"
-                                android:textColor="@color/font_text_minor_heading"
-                                 android:textSize="@dimen/spinner_header_txt"
-                                tools:ignore="RtlHardcoded" />
-
-                            <Spinner
-                                android:id="@+id/spinner_condition_approad"
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_installation_favour_of"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@drawable/spinner_status"
-                                android:layout_marginTop="@dimen/spinner_header_top_space"
-                                />
+                                android:layout_height="wrap_content"
+                                android:hint="@string/installation_favour_of"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:maxLength="100" />
+                        </com.google.android.material.textfield.TextInputLayout>
 
-                           <!-- <ImageView
-                                style="@style/StyledImagedown_large"
-                                tools:ignore="ContentDescription" />-->
-
-
-                        </LinearLayout>
 
                     </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/control_padding"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_person_met_at_site"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_person_met_at_site"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Person Met at site"
+                                android:inputType="text"
+                                android:maxLength="100" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_approach_road_width"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_approach_road_width"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Approach road width"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:maxLength="3" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -794,6 +837,36 @@
                                 style="@style/StyledImagedown_large"
                                 tools:ignore="ContentDescription" />-->
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/height_5"
+                            android:layout_marginRight="@dimen/height_3"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/textview_condition_approad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/condition_approad"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/spinner_header_txt"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/spinner_condition_approad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/spinner_status"
+                                android:layout_marginTop="@dimen/spinner_header_top_space"
+                                />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <TextView
@@ -1644,20 +1717,145 @@
                         android:scrollbars="vertical"
                         android:visibility="visible"></androidx.recyclerview.widget.RecyclerView>
 
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_locality_development"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_locality_development"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:hint="Locality development"
+                                android:inputType="number"
+                                android:maxLength="3" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_electricity_meter_no"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_electricity_meter_no"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:hint="Electricity meter no"
+                                android:inputType="text"
+                                android:maxLength="20" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_local_body"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_local_body"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:hint="Local body"
+                                android:inputType="text"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_tenant_name"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_tenant_name"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:hint="Tenant name"
+                                android:inputType="text"
+                                android:maxLength="50" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:id="@+id/layout_no_of_tenants"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/font_texthint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editText_no_of_tenants"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:hint="No .of .tenants"
+                                android:inputType="number"
+                                android:maxLength="10" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/height_5"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:paddingTop="@dimen/height_5"
                         android:paddingBottom="@dimen/height_5"
-                        android:weightSum="3">
+                        >
 
                         <CheckBox
                             android:id="@+id/checkbox_plot_demarcated"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="@dimen/_25sdp"
-                            android:layout_weight="1"
                             android:button="@drawable/check_box_selector"
                             android:checked="false"
                             android:gravity="center_vertical"
@@ -1672,9 +1870,8 @@
 
                         <CheckBox
                             android:id="@+id/checkbox_isproperty_demolish"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="@dimen/_25sdp"
-                            android:layout_weight="1"
                             android:button="@drawable/check_box_selector"
                             android:checked="false"
                             android:gravity="center_vertical"
@@ -1689,10 +1886,9 @@
 
                         <CheckBox
                             android:id="@+id/checkbox_property_within_muni"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="@dimen/_25sdp"
                             android:layout_gravity="top"
-                            android:layout_weight="1"
                             android:button="@drawable/check_box_selector"
                             android:checked="false"
                             android:gravity="center_vertical"
@@ -1706,7 +1902,26 @@
                             android:textSize="@dimen/for_check_box"
                             tools:ignore="RtlHardcoded" />
 
+                        <CheckBox
+                            android:id="@+id/checkbox_property_technically"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="top"
+                            android:button="@drawable/check_box_selector"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            android:lines="2"
+                            android:paddingLeft="@dimen/height_4"
+                            android:paddingRight="@dimen/height_2"
+                            android:paddingBottom="@dimen/height_5"
+                            android:singleLine="false"
+                            android:text="@string/property_technically"
+                            android:textColor="@color/font_text"
+                            android:textSize="@dimen/for_check_box"
+                            tools:ignore="RtlHardcoded" />
+
                     </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -3313,20 +3528,20 @@
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                            android:id="@+id/layout_rentalincome"
+                            android:id="@+id/layout_floor_height"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:paddingRight="@dimen/height_5"
                             tools:ignore="RtlHardcoded,RtlSymmetry">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/editText_rentalincome"
-                                android:layout_width="match_parent"
+                                android:id="@+id/editText_floor_height"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/rentalincome"
-                                android:inputType="number"
-                                android:maxLength="9" />
+                                android:layout_width="match_parent"
+                                android:hint="@string/floor_height"
+                                android:inputType="textCapWords"
+                                android:maxLength="18"
+                                tools:ignore="TextFields" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -3357,7 +3572,44 @@
                         android:layout_marginTop="@dimen/space_between_layout"
                         >
 
-                        <com.google.android.material.textfield.TextInputLayout
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/height_8"
+                            android:layout_marginRight="@dimen/height_8"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:id="@+id/carparking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/height_3"
+                                android:gravity="left"
+                                android:text="@string/carparking"
+                                android:textColor="@color/font_text_minor_heading"
+                                android:textSize="@dimen/spinner_header_txt"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/textview_carparking_text"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="left|center_vertical"
+                                android:gravity="left|center_vertical"
+                                tools:ignore="InconsistentLayout,RtlHardcoded"
+                                android:layout_marginTop="@dimen/spinner_header_top_space"
+                                android:background="@drawable/spinner_status"
+                                />
+
+
+                            <!--  <ImageView
+                                  style="@style/StyledImagedown_large"
+                                  tools:ignore="ContentDescription" />-->
+                        </LinearLayout>
+
+                       <!-- <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                             android:id="@+id/layout_floor_height"
                             android:layout_width="0dp"
@@ -3373,7 +3625,7 @@
                                 android:inputType="textCapWords"
                                 android:maxLength="18"
                                 tools:ignore="TextFields" />
-                        </com.google.android.material.textfield.TextInputLayout>
+                        </com.google.android.material.textfield.TextInputLayout>-->
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -3771,44 +4023,33 @@
                                 tools:ignore="ContentDescription" />-->
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="@dimen/height_8"
-                            android:layout_marginRight="@dimen/height_8"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            tools:ignore="RtlHardcoded">
 
-                            <TextView
-                                android:id="@+id/carparking"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/height_3"
-                                android:gravity="left"
-                                android:text="@string/carparking"
-                                android:textColor="@color/font_text_minor_heading"
-                                android:textSize="@dimen/spinner_header_txt"
-                                tools:ignore="RtlHardcoded" />
-
-                            <TextView
-                                android:id="@+id/textview_carparking_text"
-                                android:layout_height="wrap_content"
-                                android:layout_width="match_parent"
-                                android:layout_gravity="left|center_vertical"
-                                android:gravity="left|center_vertical"
-                                tools:ignore="InconsistentLayout,RtlHardcoded"
-                                android:layout_marginTop="@dimen/spinner_header_top_space"
-                                android:background="@drawable/spinner_status"
-                                />
-
-
-                          <!--  <ImageView
-                                style="@style/StyledImagedown_large"
-                                tools:ignore="ContentDescription" />-->
-                        </LinearLayout>
 
                     </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:id="@+id/layout_rentalincome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/height_5"
+                        tools:ignore="RtlHardcoded,RtlSymmetry"
+                        android:layout_marginTop="@dimen/spinner_header_top_space"
+                        android:layout_marginBottom="@dimen/spinner_header_top_space"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_rentalincome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/rentalincome"
+                            android:inputType="textMultiLine"
+                            android:maxLength="250"
+                            android:singleLine="false"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -3938,6 +4179,7 @@
                         tools:ignore="DisableBaselineAlignment">
 
                         <LinearLayout
+                            android:background="@drawable/line_right"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -3988,6 +4230,62 @@
                             </RadioGroup>
 
                         </LinearLayout>
+
+
+                        <LinearLayout
+                            android:background="@drawable/line_right"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/height_4"
+                            tools:ignore="RtlHardcoded"
+                            >
+
+                            <TextView
+                                android:id="@+id/textview_whether_property_identified"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/id_radiogroup_whether_property_identified"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/height_8"
+                                android:text="Whether property is identifiable"
+                                android:textColor="@color/font_heading"
+                                android:textSize="@dimen/font_samll"
+                                android:textStyle="normal"
+                                tools:ignore="RtlHardcoded" />
+
+                            <RadioGroup
+                                android:id="@+id/id_radiogroup_whether_property_identified"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                tools:ignore="RtlHardcoded">
+
+                                <RadioButton
+                                    android:id="@+id/id_radio_whether_property_identified_yes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/yes" />
+
+                                <RadioButton
+                                    android:id="@+id/id_radio_whether_property_identified_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/height_15"
+                                    android:checked="false"
+                                    android:text="@string/no"
+                                    tools:ignore="RtlHardcoded" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </LinearLayout>

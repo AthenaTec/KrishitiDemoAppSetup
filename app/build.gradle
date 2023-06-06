@@ -42,7 +42,7 @@ android {
     signingConfigs {
 
         release {
-            storeFile file("/Users/bharanidharan/Documents/office/Kaptas/Real/mapprealappraiser/app/realappraiser.jks")
+            storeFile file('realappraiser.jks')
             storePassword "realappraiser"
             keyAlias "realappraiser"
             keyPassword "realappraiser"

@@ -924,6 +924,56 @@
         android:layout_marginBottom="@dimen/height_10"
         android:background="@color/line"></View>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/control_padding"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="DisableBaselineAlignment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/layout_actual_fsi"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColorHint="@color/font_texthint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_residential_usage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Actual FSI at site"
+                android:inputType="number"
+                android:maxLength="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:id="@+id/layout_allowable_fsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColorHint="@color/font_texthint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_allowable_fsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Allowable FSI as per development regulations"
+                android:inputType="number"
+                android:maxLength="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/textview_internal_composition"
