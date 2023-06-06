@@ -99,6 +99,8 @@
     <string name="same">Same</string>
     <string name="servey_persence">Survey in presence of</string>
     <string name="plotno">Plot No</string>
+    <string name="resident_usage">% Residential Usage in Property</string>
+    <string name="commercial_usage">% Residential Usage in Property</string>
     <string name="select_localitycate" tools:ignore="UnusedResources">Select Locality Category</string>
     <string name="select_class" tools:ignore="UnusedResources">Select Class</string>
     <string name="select">Select</string>
@@ -259,6 +261,7 @@
     <string name="marketability">Marketability</string>
     <string name="passagecorridorschowklobby">Passage/Corridors/Chowk/Lobby</string>
     <string name="typeoflocality">Type of locality</string>
+    <string name="installation_favour_of">Installation in favor of</string>
     <string name="bathflooring">Bath Flooring</string>
     <string name="amenitiesquality">Amenities Quality</string>
     <string name="kitchentype">Kitchen Type</string>

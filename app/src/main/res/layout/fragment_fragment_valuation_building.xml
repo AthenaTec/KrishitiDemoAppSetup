@@ -44,28 +44,29 @@
         tools:ignore="DisableBaselineAlignment">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
             android:paddingRight="@dimen/height_10"
             app:hintTextAppearance="@style/TextInputLayout_hint"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_guideline_rate"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:hint="@string/guideline_rate"
                 android:inputType="number"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/height_15"
-            android:layout_marginRight="@dimen/height_15"
-            android:layout_weight="1"
-            android:background="@drawable/bottom_grey">
+            android:layout_marginRight="@dimen/height_4"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textview_unit_land"
@@ -75,32 +76,35 @@
                 android:gravity="left"
                 android:text="@string/unit"
                 android:textColor="@color/font_text_minor_heading"
-                android:textSize="@dimen/miniut_small"
+                android:textSize="@dimen/spinner_header_txt"
                 tools:ignore="RtlHardcoded" />
 
             <Spinner
                 android:id="@+id/spinner_ft_meter"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null" />
+                android:background="@drawable/spinner_status"
+                android:layout_marginTop="@dimen/spinner_header_top_space"/>
 
-            <ImageView
+           <!-- <ImageView
                 style="@style/StyledImagedown_large"
                 android:layout_marginTop="@dimen/height_6"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription" />-->
 
-        </FrameLayout>
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/height_10"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/height_2"
+            android:layout_weight="1.2"
             tools:ignore="RtlHardcoded">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_guideline_value"
-                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -155,6 +159,7 @@
         tools:ignore="DisableBaselineAlignment">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -162,9 +167,10 @@
             app:hintTextAppearance="@style/TextInputLayout_hint"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_permissiblearea"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -173,6 +179,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -180,9 +187,10 @@
             android:paddingRight="@dimen/height_5"
             app:hintTextAppearance="@style/TextInputLayout_hint">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_unit_permissiblearea"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -232,6 +240,7 @@
           </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -239,9 +248,10 @@
             app:hintTextAppearance="@style/TextInputLayout_hint"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_total_permissiblearea"
-                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -262,6 +272,7 @@
         tools:ignore="DisableBaselineAlignment">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -269,9 +280,10 @@
             app:hintTextAppearance="@style/TextInputLayout_hint"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_actualarea"
-                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -281,6 +293,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -288,9 +301,10 @@
             android:paddingRight="@dimen/height_5"
             app:hintTextAppearance="@style/TextInputLayout_hint">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_unit_actualarea"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -300,6 +314,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -307,15 +322,17 @@
             android:paddingRight="@dimen/height_5"
             app:hintTextAppearance="@style/TextInputLayout_hint">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_rate_actualarea"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:hint="@string/rate"
                 android:inputType="number"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -323,9 +340,10 @@
             app:hintTextAppearance="@style/TextInputLayout_hint"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_total_actualarea"
-                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:enabled="false"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -364,6 +382,7 @@
         tools:ignore="DisableBaselineAlignment">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -371,21 +390,22 @@
             app:hintTextAppearance="@style/TextInputLayout_hint"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_construction_rate"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:hint="@string/construction_rate"
                 android:inputType="number"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/height_15"
             android:layout_marginRight="@dimen/height_15"
             android:layout_weight="1"
-            android:background="@drawable/bottom_grey">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textview_unit_construction"
@@ -395,32 +415,36 @@
                 android:gravity="left"
                 android:text="@string/unit"
                 android:textColor="@color/font_text_minor_heading"
-                android:textSize="@dimen/miniut_small"
+                android:textSize="@dimen/spinner_header_txt"
                 tools:ignore="RtlHardcoded" />
 
             <Spinner
                 android:id="@+id/spinner_ft_meter_construction"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null" />
+                android:background="@drawable/spinner_status"
+                android:layout_marginTop="@dimen/spinner_header_top_space"
+                />
 
-            <ImageView
+          <!--  <ImageView
                 style="@style/StyledImagedown_large"
                 android:layout_marginTop="@dimen/height_6"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription" />-->
 
-        </FrameLayout>
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/height_10"
             android:layout_weight="1"
             tools:ignore="RtlHardcoded">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_construction_value"
-                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:enabled="false"
                 android:hint="@string/construction_value"
                 android:inputType="number" />
@@ -782,7 +806,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="3.8"
+            android:layout_weight="3.5"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingLeft="@dimen/height_6"
@@ -982,26 +1006,29 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="2.2"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginRight="@dimen/height_5"
+                android:layout_marginRight="@dimen/height_10"
                 android:layout_weight="4.1"
                 android:orientation="horizontal"
                 android:weightSum="1"
                 tools:ignore="NestedWeights,RtlHardcoded">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="@dimen/height_2"
+                    android:layout_marginStart="@dimen/height_2"
+                    android:layout_marginLeft="@dimen/height_2"
                     android:layout_weight="0.5"
-                    android:background="@drawable/bottom_grey"
+                    android:orientation="vertical"
                     tools:ignore="NestedWeights,RtlHardcoded">
 
                     <TextView
@@ -1024,18 +1051,21 @@
 
                     <TextView
                         android:id="@+id/spinner_realizable"
-                        style="@style/StyledTilText_multicheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_gravity="left|center_vertical"
                         android:gravity="left|center_vertical"
                         android:text="@string/select"
-                        tools:ignore="HardcodedText,RtlHardcoded" />
+                        tools:ignore="HardcodedText,RtlHardcoded"
+                        android:background="@drawable/spinner_status"
+                        />
 
-                    <ImageView
+                    <!--<ImageView
                         style="@style/StyledImagedown_large"
                         android:layout_marginTop="@dimen/height_6"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription" />-->
 
-                </FrameLayout>
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/editText_realizable_custom"
@@ -1058,7 +1088,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginRight="@dimen/height_5"
+                android:layout_marginRight="@dimen/height_10"
                 android:layout_weight="4.1"
                 android:orientation="horizontal"
                 android:weightSum="1"
@@ -1066,12 +1096,12 @@
                 tools:ignore="RtlHardcoded">
 
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="@dimen/height_2"
                     android:layout_weight="0.5"
-                    android:background="@drawable/bottom_grey"
+                    android:orientation="vertical"
                     tools:ignore="RtlHardcoded">
 
                     <TextView
@@ -1094,18 +1124,21 @@
 
                     <TextView
                         android:id="@+id/spinner_distress"
-                        style="@style/StyledTilText_multicheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="left|center_vertical"
                         android:gravity="left|center_vertical"
                         android:text="@string/select"
-                        tools:ignore="HardcodedText,RtlHardcoded" />
+                        tools:ignore="HardcodedText,RtlHardcoded"
+                        android:background="@drawable/spinner_status"
+                        />
 
-                    <ImageView
+                    <!--<ImageView
                         style="@style/StyledImagedown_large"
                         android:layout_marginTop="@dimen/height_6"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription" />-->
 
-                </FrameLayout>
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/editText_distress_custom"
@@ -1128,20 +1161,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginRight="@dimen/height_5"
+                android:layout_marginRight="@dimen/height_10"
                 android:layout_weight="4.1"
                 android:orientation="horizontal"
                 android:weightSum="1"
                 android:layout_marginTop="@dimen/_5sdp"
                 tools:ignore="DisableBaselineAlignment,RtlHardcoded">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="@dimen/height_2"
                     android:layout_weight="0.5"
-                    android:background="@drawable/bottom_grey"
-                    tools:ignore="RtlHardcoded">
+                    tools:ignore="RtlHardcoded"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textview_carpet_per"
@@ -1162,26 +1195,30 @@
                           android:spinnerMode="dialog" />-->
                     <TextView
                         android:id="@+id/spinner_carpet"
-                        style="@style/StyledTilText_multicheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@drawable/spinner_status"
                         android:layout_gravity="left|center_vertical"
                         android:gravity="left|center_vertical"
                         android:text="Select"
                         tools:ignore="HardcodedText,RtlHardcoded" />
 
-                    <ImageView
+                  <!--  <ImageView
                         style="@style/StyledImagedown_large"
                         android:layout_marginTop="@dimen/height_6"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription" />-->
 
-                </FrameLayout>
+                </LinearLayout>
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/height_2"
                     android:layout_weight="0.5"
-                    android:background="@drawable/bottom_grey"
-                    tools:ignore="RtlHardcoded">
+                    tools:ignore="RtlHardcoded"
+                    android:orientation="vertical"
+                    >
 
                     <TextView
                         android:id="@+id/textview_select"
@@ -1202,34 +1239,38 @@
                          android:spinnerMode="dialog" />-->
                     <TextView
                         android:id="@+id/spinner_carpet_type"
-                        style="@style/StyledTilText_multicheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
                         android:layout_gravity="left|center_vertical"
                         android:gravity="left|center_vertical"
                         android:text="Select"
-                        tools:ignore="HardcodedText,RtlHardcoded" />
+                        tools:ignore="HardcodedText,RtlHardcoded"
+                        android:background="@drawable/spinner_status"
+                        />
 
-                    <ImageView
+                   <!-- <ImageView
                         style="@style/StyledImagedown_large"
                         android:layout_marginTop="@dimen/height_6"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription" />-->
 
-                </FrameLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
-
-
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginRight="@dimen/height_3"
+                android:layout_marginRight="@dimen/height_10"
                 android:layout_weight="4.1"
                 app:hintTextAppearance="@style/TextInputLayout_hint"
                 tools:ignore="RtlHardcoded">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_remarks"
-                    style="@style/StyledTilEditText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:gravity="bottom"
                     android:hint="@string/remarks"
                     android:inputType="textMultiLine|textCapWords"

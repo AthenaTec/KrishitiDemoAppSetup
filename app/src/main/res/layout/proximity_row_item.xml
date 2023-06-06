@@ -17,23 +17,26 @@
         android:weightSum="2"
         tools:ignore="RtlHardcoded,RtlSymmetry">
 
-        <FrameLayout
+        <!--<FrameLayout
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginLeft="@dimen/height_4"
             android:layout_marginRight="@dimen/height_4"
             android:layout_weight="0.8"
-            android:background="@drawable/bottom_grey">
+            android:background="@drawable/bottom_grey">-->
 
             <Spinner
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/height_4"
+                android:layout_marginRight="@dimen/height_4"
+                android:layout_weight="0.8"
                 android:id="@+id/spinner_proximities_1"
-                android:background="@null" />
+                android:background="@drawable/spinner_status" />
 
-            <ImageView style="@style/StyledImagedown_large"
+            <!--<ImageView style="@style/StyledImagedown_large"
                 tools:ignore="ContentDescription" />
-        </FrameLayout>
+        </FrameLayout>-->
 
 
         <EditText

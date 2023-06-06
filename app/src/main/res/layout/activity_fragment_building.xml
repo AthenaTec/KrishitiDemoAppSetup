@@ -30,7 +30,7 @@
         <CheckBox
             android:id="@+id/checkbox_is_compounded"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_25sdp"
             android:layout_alignParentRight="true"
             android:layout_gravity="right"
             android:layout_marginRight="@dimen/height_3"
@@ -79,16 +79,20 @@
             android:paddingRight="@dimen/height_10">
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:id="@+id/layout_compound_permissiblearea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
                 android:paddingRight="@dimen/height_18"
                 app:hintTextAppearance="@style/TextInputLayout_hint"
                 tools:ignore="RtlHardcoded,RtlSymmetry">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_compound_permissiblearea"
-                    style="@style/StyledTilEditText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:hint="@string/compound_permissiblearea"
                     android:inputType="numberDecimal"
                     android:maxLength="8" />
@@ -111,17 +115,21 @@
             android:paddingRight="@dimen/height_10">
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:id="@+id/layout_as_per_measurement"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
                 android:paddingLeft="@dimen/height_5"
                 android:paddingRight="@dimen/height_18"
                 app:hintTextAppearance="@style/TextInputLayout_hint"
                 tools:ignore="RtlHardcoded,RtlSymmetry">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_as_per_measurement"
-                    style="@style/StyledTilEditText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:hint="@string/as_per_measurement"
                     android:inputType="numberDecimal"
                     android:maxLength="8" />
@@ -146,13 +154,15 @@
         android:weightSum="2"
         tools:ignore="DisableBaselineAlignment">
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/height_8"
             android:layout_weight="1"
-            android:background="@drawable/bottom_grey"
-            tools:ignore="RtlHardcoded">
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded"
+            android:layout_marginTop="@dimen/spinner_header_top_space"
+            >
 
             <TextView
                 android:id="@+id/textview_measurement_doc"
@@ -162,22 +172,24 @@
                 android:gravity="left"
                 android:text="@string/measurement"
                 android:textColor="@color/font_text_minor_heading"
-                android:textSize="@dimen/miniut_small"
+                android:textSize="@dimen/spinner_header_txt"
                 tools:ignore="RtlHardcoded" />
 
             <Spinner
                 android:id="@+id/spinner_measurement1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null"
-                tools:ignore="InconsistentLayout" />
+                android:background="@drawable/spinner_status"
+                tools:ignore="InconsistentLayout"
+                android:layout_marginTop="@dimen/spinner_header_top_space"
+                />
 
-            <ImageView
+            <!--<ImageView
                 style="@style/StyledImagedown_large"
                 android:layout_marginTop="@dimen/height_6"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription" />-->
 
-        </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -217,6 +229,7 @@
                 tools:ignore="DisableBaselineAlignment,RtlHardcoded">
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:id="@+id/layout_floors"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -224,9 +237,10 @@
                     android:paddingRight="@dimen/height_4"
                     tools:ignore="RtlHardcoded,RtlSymmetry">
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editText_floors"
-                        style="@style/StyledTilEditText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
                         android:hint="@string/floors"
                         android:inputType="number"
                         android:maxLength="2" />
@@ -234,6 +248,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:id="@+id/layout_approved_floors"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -242,9 +257,10 @@
                     android:paddingRight="@dimen/height_2"
                     android:textColorHint="@color/font_texthint">
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editText_approved_floors"
-                        style="@style/StyledTilEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="@string/approved_floors"
                         android:inputType="number"
                         android:maxLength="2" />
@@ -254,19 +270,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/height_2"
+                android:layout_marginTop="@dimen/space_between_layout"
                 android:layout_marginRight="@dimen/height_12"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 tools:ignore="DisableBaselineAlignment,RtlHardcoded">
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
-                    android:background="@drawable/bottom_grey">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textview_actualusage"
@@ -276,25 +292,32 @@
                         android:gravity="left"
                         android:text="@string/actualusage"
                         android:textColor="@color/font_text_minor_heading"
-                        android:textSize="@dimen/miniut_small"
-                        tools:ignore="RtlHardcoded" />
+                        android:textSize="@dimen/spinner_header_txt"
+                        tools:ignore="RtlHardcoded"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        />
 
                     <TextView
                         android:id="@+id/textview_actual_usage"
-                        style="@style/StyledTilText_multicheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@drawable/spinner_status"
                         android:layout_gravity="left|center_vertical"
                         android:gravity="left|center_vertical"
+                        android:layout_marginTop="@dimen/spinner_header_top_space"
                         tools:ignore="InconsistentLayout,RtlHardcoded" />
 
 
-                    <ImageView
+                   <!-- <ImageView
                         style="@style/StyledImagedown_large"
                         android:layout_marginTop="@dimen/height_6"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription" />-->
 
-                </FrameLayout>
+                </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:id="@+id/layout_Floor_details"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -302,9 +325,10 @@
                     android:paddingRight="@dimen/height_2"
                     android:textColorHint="@color/font_texthint">
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editText_Floor_details"
-                        style="@style/StyledTilEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="@string/Floor_details"
                         android:inputType="textCapWords"
                         android:maxLength="250" />

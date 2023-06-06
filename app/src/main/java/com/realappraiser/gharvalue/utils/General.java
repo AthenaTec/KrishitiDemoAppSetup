@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
@@ -1263,7 +1264,5 @@ public class General implements OnPageChangeListener, OnLoadCompleteListener,
         Activity activity = Context;
         return ((LocationManager) context2.getSystemService(android.content.Context.LOCATION_SERVICE)).isProviderEnabled("gps");
     }
-
-
 
 }

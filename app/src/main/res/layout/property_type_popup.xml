@@ -3,37 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/White"
     android:orientation="vertical"
-    tools:ignore="Overdraw">
+    tools:ignore="Overdraw"
+    android:layout_marginBottom="@dimen/_40sdp"
+    android:layout_marginTop="@dimen/_40sdp"
+    >
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/property_type"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/cardview_dialog_layout"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:orientation="vertical"
-        android:paddingBottom="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="20dp">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/property_type"
-            android:textColor="@color/Activite"
-            android:textSize="20sp" />
-
+        android:background="@drawable/popup_white_rec_bg"
+        >
         <LinearLayout
             android:id="@+id/property_type_lay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/layout"
-            android:layout_below="@+id/title"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -44,7 +50,6 @@
                     android:id="@+id/property_type_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp"
                     android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     android:fadeScrollbars="true"
@@ -62,21 +67,21 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/height_8"
-            android:layout_marginTop="@dimen/height_8"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/cancelBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/strokeshape_bg"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
                 android:text="CANCEL"
-                android:textColor="@color/Black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -84,7 +89,7 @@
             <Button
                 android:id="@+id/updateBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
@@ -92,6 +97,8 @@
                 android:gravity="center"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
                 android:text="UPDATE"
                 android:textColor="@color/White"
                 android:textSize="16sp"

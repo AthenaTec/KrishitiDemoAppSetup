@@ -1057,6 +1057,7 @@ public class OpenCaseAdapter extends RecyclerView.Adapter<OpenCaseAdapter.ViewHo
     private void PropertyTypeUpdatePopup(String msg) {
         dialog = new Dialog(mContext);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
         dialog.setContentView(R.layout.property_type_popup);
@@ -2460,6 +2461,7 @@ public class OpenCaseAdapter extends RecyclerView.Adapter<OpenCaseAdapter.ViewHo
     private void PropertyTypeUpdatePopup_kakode(String msg, final String case_id) {
         dialog = new Dialog(mContext);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
         dialog.setContentView(R.layout.property_type_popup);
