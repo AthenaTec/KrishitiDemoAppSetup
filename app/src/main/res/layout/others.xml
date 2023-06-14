@@ -1023,10 +1023,16 @@
                         android:weightSum="2"
                         tools:ignore="DisableBaselineAlignment">
 
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            >
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                             android:id="@+id/layout_ab_east"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textColorHint="@color/font_texthint">
@@ -1040,6 +1046,52 @@
                                 android:inputType="textCapWords"
                                 android:maxLength="100" />
                         </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+                        <CheckBox
+                            android:id="@+id/checkbox_ab_east_yes"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginRight="@dimen/height_3"
+                            android:layout_weight="1"
+                            android:button="@drawable/check_box_selector"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/height_8"
+                            android:text="yes"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_very_medium"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_ab_east_no"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginRight="@dimen/height_3"
+                                    android:layout_weight="1"
+                                    android:button="@drawable/check_box_selector"
+                                    android:checked="false"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="@dimen/height_8"
+                                    android:text="no"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/font_very_medium"
+                                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+                            </LinearLayout>
+                            <EditText
+                                android:id="@+id/editText_checkbox_ab_east_no"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/_11sdp"
+                                android:hint="@string/east"
+                                android:inputType="textCapWords"
+                                android:maxLength="100" />
+                        </LinearLayout>
+
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
